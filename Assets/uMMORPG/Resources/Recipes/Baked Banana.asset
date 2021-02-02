@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df6cb95dcbdafe747a177516433e7b88, type: 3}
+  m_Name: Baked Banana
+  m_EditorClassIdentifier: 
+  ingredients:
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  - item: {fileID: 0}
+    amount: 0
+  result: {fileID: 11400000, guid: cc1613b115f4c73408de9b94bdd761b5, type: 2}
+  craftingTime: 1
+  probability: 1
+  ingredient: {fileID: 11400000, guid: 5966c016ee8f66744b4199ba1a9cc227, type: 2}
+  fuel: {fileID: 11400000, guid: ae0314505b06f4f1280aa735db1c70e8, type: 2}
+  bakingTime: 5

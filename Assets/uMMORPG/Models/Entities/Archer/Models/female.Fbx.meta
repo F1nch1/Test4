@@ -1,0 +1,2136 @@
+fileFormatVersion: 2
+guid: 3bc09d014dbe23c4d82b026f6ad06b23
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: vis2k_arm_legging_L_female
+    100004: vis2k_arm_legging_R_female
+    100006: vis2k_armar_belt_001_female
+    100008: vis2k_baris_ust_female
+    100010: vis2k_Bikini_Boottom_female
+    100012: vis2k_Bikini_Top_female
+    100014: vis2k_CC_Base_Body_female
+    100016: vis2k_CC_Base_BoneRoot_female
+    100018: vis2k_CC_Base_Eye_female
+    100020: vis2k_CC_Base_FacialBone_female
+    100022: vis2k_CC_Base_Head_female
+    100024: vis2k_CC_Base_Hip_female
+    100026: vis2k_CC_Base_JawRoot_female
+    100028: vis2k_CC_Base_L_BigToe1_female
+    100030: vis2k_CC_Base_L_Breast_female
+    100032: vis2k_CC_Base_L_Calf_female
+    100034: vis2k_CC_Base_L_CalfTwist01_female
+    100036: vis2k_CC_Base_L_CalfTwist02_female
+    100038: vis2k_CC_Base_L_Clavicle_female
+    100040: vis2k_CC_Base_L_ElbowShareBone_female
+    100042: vis2k_CC_Base_L_Eye_female
+    100044: vis2k_CC_Base_L_Foot_female
+    100046: vis2k_CC_Base_L_Forearm_female
+    100048: vis2k_CC_Base_L_ForearmTwist01_female
+    100050: vis2k_CC_Base_L_ForearmTwist02_female
+    100052: vis2k_CC_Base_L_Hand_female
+    100054: vis2k_CC_Base_L_Index1_female
+    100056: vis2k_CC_Base_L_Index2_female
+    100058: vis2k_CC_Base_L_Index3_female
+    100060: vis2k_CC_Base_L_IndexToe1_female
+    100062: vis2k_CC_Base_L_KneeShareBone_female
+    100064: vis2k_CC_Base_L_Mid1_female
+    100066: vis2k_CC_Base_L_Mid2_female
+    100068: vis2k_CC_Base_L_Mid3_female
+    100070: vis2k_CC_Base_L_MidToe1_female
+    100072: vis2k_CC_Base_L_Pinky1_female
+    100074: vis2k_CC_Base_L_Pinky2_female
+    100076: vis2k_CC_Base_L_Pinky3_female
+    100078: vis2k_CC_Base_L_PinkyToe1_female
+    100080: vis2k_CC_Base_L_RibsTwist_female
+    100082: vis2k_CC_Base_L_Ring1_female
+    100084: vis2k_CC_Base_L_Ring2_female
+    100086: vis2k_CC_Base_L_Ring3_female
+    100088: vis2k_CC_Base_L_RingToe1_female
+    100090: vis2k_CC_Base_L_Thigh_female
+    100092: vis2k_CC_Base_L_ThighTwist01_female
+    100094: vis2k_CC_Base_L_ThighTwist02_female
+    100096: vis2k_CC_Base_L_Thumb1_female
+    100098: vis2k_CC_Base_L_Thumb2_female
+    100100: vis2k_CC_Base_L_Thumb3_female
+    100102: vis2k_CC_Base_L_ToeBase_female
+    100104: vis2k_CC_Base_L_ToeBaseShareBone_female
+    100106: vis2k_CC_Base_L_Upperarm_female
+    100108: vis2k_CC_Base_L_UpperarmTwist01_female
+    100110: vis2k_CC_Base_L_UpperarmTwist02_female
+    100112: vis2k_CC_Base_NeckTwist01_female
+    100114: vis2k_CC_Base_NeckTwist02_female
+    100116: vis2k_CC_Base_Pelvis_female
+    100118: vis2k_CC_Base_R_BigToe1_female
+    100120: vis2k_CC_Base_R_Breast_female
+    100122: vis2k_CC_Base_R_Calf_female
+    100124: vis2k_CC_Base_R_CalfTwist01_female
+    100126: vis2k_CC_Base_R_CalfTwist02_female
+    100128: vis2k_CC_Base_R_Clavicle_female
+    100130: vis2k_CC_Base_R_ElbowShareBone_female
+    100132: vis2k_CC_Base_R_Eye_female
+    100134: vis2k_CC_Base_R_Foot_female
+    100136: vis2k_CC_Base_R_Forearm_female
+    100138: vis2k_CC_Base_R_ForearmTwist01_female
+    100140: vis2k_CC_Base_R_ForearmTwist02_female
+    100142: vis2k_CC_Base_R_Hand_female
+    100144: vis2k_CC_Base_R_Index1_female
+    100146: vis2k_CC_Base_R_Index2_female
+    100148: vis2k_CC_Base_R_Index3_female
+    100150: vis2k_CC_Base_R_IndexToe1_female
+    100152: vis2k_CC_Base_R_KneeShareBone_female
+    100154: vis2k_CC_Base_R_Mid1_female
+    100156: vis2k_CC_Base_R_Mid2_female
+    100158: vis2k_CC_Base_R_Mid3_female
+    100160: vis2k_CC_Base_R_MidToe1_female
+    100162: vis2k_CC_Base_R_Pinky1_female
+    100164: vis2k_CC_Base_R_Pinky2_female
+    100166: vis2k_CC_Base_R_Pinky3_female
+    100168: vis2k_CC_Base_R_PinkyToe1_female
+    100170: vis2k_CC_Base_R_RibsTwist_female
+    100172: vis2k_CC_Base_R_Ring1_female
+    100174: vis2k_CC_Base_R_Ring2_female
+    100176: vis2k_CC_Base_R_Ring3_female
+    100178: vis2k_CC_Base_R_RingToe1_female
+    100180: vis2k_CC_Base_R_Thigh_female
+    100182: vis2k_CC_Base_R_ThighTwist01_female
+    100184: vis2k_CC_Base_R_ThighTwist02_female
+    100186: vis2k_CC_Base_R_Thumb1_female
+    100188: vis2k_CC_Base_R_Thumb2_female
+    100190: vis2k_CC_Base_R_Thumb3_female
+    100192: vis2k_CC_Base_R_ToeBase_female
+    100194: vis2k_CC_Base_R_ToeBaseShareBone_female
+    100196: vis2k_CC_Base_R_Upperarm_female
+    100198: vis2k_CC_Base_R_UpperarmTwist01_female
+    100200: vis2k_CC_Base_R_UpperarmTwist02_female
+    100202: vis2k_CC_Base_Spine01_female
+    100204: vis2k_CC_Base_Spine02_female
+    100206: vis2k_CC_Base_Teeth01_female
+    100208: vis2k_CC_Base_Teeth02_female
+    100210: vis2k_CC_Base_Teeth_female
+    100212: vis2k_CC_Base_Tongue01_female
+    100214: vis2k_CC_Base_Tongue02_female
+    100216: vis2k_CC_Base_Tongue03_female
+    100218: vis2k_CC_Base_Tongue_female
+    100220: vis2k_CC_Base_UpperJaw_female
+    100222: vis2k_CC_Base_Waist_female
+    100224: vis2k_Celana_female
+    100226: vis2k_Coat_female
+    100228: vis2k_gloves_L_001_female
+    100230: vis2k_gloves_R_001_female
+    100232: vis2k_Hair_female
+    100234: vis2k_Hood_female
+    100236: vis2k_Sayap_female
+    100238: vis2k_Sepatu_female
+    100240: vis2k_top1_female
+    100242: vis2k_top_armor_001_female
+    400000: //RootNode
+    400002: vis2k_arm_legging_L_female
+    400004: vis2k_arm_legging_R_female
+    400006: vis2k_armar_belt_001_female
+    400008: vis2k_baris_ust_female
+    400010: vis2k_Bikini_Boottom_female
+    400012: vis2k_Bikini_Top_female
+    400014: vis2k_CC_Base_Body_female
+    400016: vis2k_CC_Base_BoneRoot_female
+    400018: vis2k_CC_Base_Eye_female
+    400020: vis2k_CC_Base_FacialBone_female
+    400022: vis2k_CC_Base_Head_female
+    400024: vis2k_CC_Base_Hip_female
+    400026: vis2k_CC_Base_JawRoot_female
+    400028: vis2k_CC_Base_L_BigToe1_female
+    400030: vis2k_CC_Base_L_Breast_female
+    400032: vis2k_CC_Base_L_Calf_female
+    400034: vis2k_CC_Base_L_CalfTwist01_female
+    400036: vis2k_CC_Base_L_CalfTwist02_female
+    400038: vis2k_CC_Base_L_Clavicle_female
+    400040: vis2k_CC_Base_L_ElbowShareBone_female
+    400042: vis2k_CC_Base_L_Eye_female
+    400044: vis2k_CC_Base_L_Foot_female
+    400046: vis2k_CC_Base_L_Forearm_female
+    400048: vis2k_CC_Base_L_ForearmTwist01_female
+    400050: vis2k_CC_Base_L_ForearmTwist02_female
+    400052: vis2k_CC_Base_L_Hand_female
+    400054: vis2k_CC_Base_L_Index1_female
+    400056: vis2k_CC_Base_L_Index2_female
+    400058: vis2k_CC_Base_L_Index3_female
+    400060: vis2k_CC_Base_L_IndexToe1_female
+    400062: vis2k_CC_Base_L_KneeShareBone_female
+    400064: vis2k_CC_Base_L_Mid1_female
+    400066: vis2k_CC_Base_L_Mid2_female
+    400068: vis2k_CC_Base_L_Mid3_female
+    400070: vis2k_CC_Base_L_MidToe1_female
+    400072: vis2k_CC_Base_L_Pinky1_female
+    400074: vis2k_CC_Base_L_Pinky2_female
+    400076: vis2k_CC_Base_L_Pinky3_female
+    400078: vis2k_CC_Base_L_PinkyToe1_female
+    400080: vis2k_CC_Base_L_RibsTwist_female
+    400082: vis2k_CC_Base_L_Ring1_female
+    400084: vis2k_CC_Base_L_Ring2_female
+    400086: vis2k_CC_Base_L_Ring3_female
+    400088: vis2k_CC_Base_L_RingToe1_female
+    400090: vis2k_CC_Base_L_Thigh_female
+    400092: vis2k_CC_Base_L_ThighTwist01_female
+    400094: vis2k_CC_Base_L_ThighTwist02_female
+    400096: vis2k_CC_Base_L_Thumb1_female
+    400098: vis2k_CC_Base_L_Thumb2_female
+    400100: vis2k_CC_Base_L_Thumb3_female
+    400102: vis2k_CC_Base_L_ToeBase_female
+    400104: vis2k_CC_Base_L_ToeBaseShareBone_female
+    400106: vis2k_CC_Base_L_Upperarm_female
+    400108: vis2k_CC_Base_L_UpperarmTwist01_female
+    400110: vis2k_CC_Base_L_UpperarmTwist02_female
+    400112: vis2k_CC_Base_NeckTwist01_female
+    400114: vis2k_CC_Base_NeckTwist02_female
+    400116: vis2k_CC_Base_Pelvis_female
+    400118: vis2k_CC_Base_R_BigToe1_female
+    400120: vis2k_CC_Base_R_Breast_female
+    400122: vis2k_CC_Base_R_Calf_female
+    400124: vis2k_CC_Base_R_CalfTwist01_female
+    400126: vis2k_CC_Base_R_CalfTwist02_female
+    400128: vis2k_CC_Base_R_Clavicle_female
+    400130: vis2k_CC_Base_R_ElbowShareBone_female
+    400132: vis2k_CC_Base_R_Eye_female
+    400134: vis2k_CC_Base_R_Foot_female
+    400136: vis2k_CC_Base_R_Forearm_female
+    400138: vis2k_CC_Base_R_ForearmTwist01_female
+    400140: vis2k_CC_Base_R_ForearmTwist02_female
+    400142: vis2k_CC_Base_R_Hand_female
+    400144: vis2k_CC_Base_R_Index1_female
+    400146: vis2k_CC_Base_R_Index2_female
+    400148: vis2k_CC_Base_R_Index3_female
+    400150: vis2k_CC_Base_R_IndexToe1_female
+    400152: vis2k_CC_Base_R_KneeShareBone_female
+    400154: vis2k_CC_Base_R_Mid1_female
+    400156: vis2k_CC_Base_R_Mid2_female
+    400158: vis2k_CC_Base_R_Mid3_female
+    400160: vis2k_CC_Base_R_MidToe1_female
+    400162: vis2k_CC_Base_R_Pinky1_female
+    400164: vis2k_CC_Base_R_Pinky2_female
+    400166: vis2k_CC_Base_R_Pinky3_female
+    400168: vis2k_CC_Base_R_PinkyToe1_female
+    400170: vis2k_CC_Base_R_RibsTwist_female
+    400172: vis2k_CC_Base_R_Ring1_female
+    400174: vis2k_CC_Base_R_Ring2_female
+    400176: vis2k_CC_Base_R_Ring3_female
+    400178: vis2k_CC_Base_R_RingToe1_female
+    400180: vis2k_CC_Base_R_Thigh_female
+    400182: vis2k_CC_Base_R_ThighTwist01_female
+    400184: vis2k_CC_Base_R_ThighTwist02_female
+    400186: vis2k_CC_Base_R_Thumb1_female
+    400188: vis2k_CC_Base_R_Thumb2_female
+    400190: vis2k_CC_Base_R_Thumb3_female
+    400192: vis2k_CC_Base_R_ToeBase_female
+    400194: vis2k_CC_Base_R_ToeBaseShareBone_female
+    400196: vis2k_CC_Base_R_Upperarm_female
+    400198: vis2k_CC_Base_R_UpperarmTwist01_female
+    400200: vis2k_CC_Base_R_UpperarmTwist02_female
+    400202: vis2k_CC_Base_Spine01_female
+    400204: vis2k_CC_Base_Spine02_female
+    400206: vis2k_CC_Base_Teeth01_female
+    400208: vis2k_CC_Base_Teeth02_female
+    400210: vis2k_CC_Base_Teeth_female
+    400212: vis2k_CC_Base_Tongue01_female
+    400214: vis2k_CC_Base_Tongue02_female
+    400216: vis2k_CC_Base_Tongue03_female
+    400218: vis2k_CC_Base_Tongue_female
+    400220: vis2k_CC_Base_UpperJaw_female
+    400222: vis2k_CC_Base_Waist_female
+    400224: vis2k_Celana_female
+    400226: vis2k_Coat_female
+    400228: vis2k_gloves_L_001_female
+    400230: vis2k_gloves_R_001_female
+    400232: vis2k_Hair_female
+    400234: vis2k_Hood_female
+    400236: vis2k_Sayap_female
+    400238: vis2k_Sepatu_female
+    400240: vis2k_top1_female
+    400242: vis2k_top_armor_001_female
+    4300000: vis2k_CC_Base_Tongue_female
+    4300002: vis2k_CC_Base_Teeth_female
+    4300004: vis2k_CC_Base_Body_female
+    4300006: vis2k_CC_Base_Eye_female
+    4300008: vis2k_Sepatu_female
+    4300010: vis2k_Sayap_female
+    4300012: vis2k_Hood_female
+    4300014: vis2k_Celana_female
+    4300016: vis2k_Coat_female
+    4300018: vis2k_Bikini_Boottom_female
+    4300020: vis2k_Bikini_Top_female
+    4300022: vis2k_top1_female
+    4300024: vis2k_top_armor_001_female
+    4300026: vis2k_baris_ust_female
+    4300028: vis2k_arm_legging_R_female
+    4300030: vis2k_arm_legging_L_female
+    4300032: vis2k_armar_belt_001_female
+    4300034: vis2k_gloves_R_001_female
+    4300036: vis2k_gloves_L_001_female
+    4300038: vis2k_Hair_female
+    7400000: Default
+    9500000: //RootNode
+    13700000: vis2k_arm_legging_L_female
+    13700002: vis2k_arm_legging_R_female
+    13700004: vis2k_armar_belt_001_female
+    13700006: vis2k_baris_ust_female
+    13700008: vis2k_Bikini_Boottom_female
+    13700010: vis2k_Bikini_Top_female
+    13700012: vis2k_CC_Base_Body_female
+    13700014: vis2k_CC_Base_Eye_female
+    13700016: vis2k_CC_Base_Teeth_female
+    13700018: vis2k_CC_Base_Tongue_female
+    13700020: vis2k_Celana_female
+    13700022: vis2k_Coat_female
+    13700024: vis2k_gloves_L_001_female
+    13700026: vis2k_gloves_R_001_female
+    13700028: vis2k_Hair_female
+    13700030: vis2k_Hood_female
+    13700032: vis2k_Sayap_female
+    13700034: vis2k_Sepatu_female
+    13700036: vis2k_top1_female
+    13700038: vis2k_top_armor_001_female
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_01_Cords_female
+    second: {fileID: 2100000, guid: 9bce7f6d80e06574a87e5b80733614b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_01_Main_female
+    second: {fileID: 2100000, guid: 608da2db698d4bc49a8eb3b88e836a3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default(1)_1_0_0_female
+    second: {fileID: 2100000, guid: ede2398ba23bdf94a999bd3b30f06cc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default_1_0_0_female
+    second: {fileID: 2100000, guid: 3c2942a740aad414180d6aca9d50b741, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(3)_1_0_0_female
+    second: {fileID: 2100000, guid: 84de41866269a8c44a55c79227e5e00c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(6)_1_0_0_female
+    second: {fileID: 2100000, guid: e019b7295d73fba46991b1debef65909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part2-01-Default(2)_1_0_0_female
+    second: {fileID: 2100000, guid: 44e847885ca5f4341b952b1996b93924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_BeltMetal_female
+    second: {fileID: 2100000, guid: 942a50de512c23549adc73d67af5d8ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Belt_female
+    second: {fileID: 2100000, guid: 2fe60d2fcce1f6d40b20afa3ce5f5d29, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_BevorLeather_female
+    second: {fileID: 2100000, guid: c34fac8b42da6344dab8dbb097440549, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Bottom_female
+    second: {fileID: 2100000, guid: 68d89380103fdb749b9c61aecd6e96f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Top_female
+    second: {fileID: 2100000, guid: 42e6c1227b4a6954fbb6be1ad9bc2690, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_FauldLeather_female
+    second: {fileID: 2100000, guid: 9fb464f989d0886439cc963ea801a58a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_FauldMetal_female
+    second: {fileID: 2100000, guid: 015a08f7892446f4cb298037938859e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_High_polytail_female_Transparency
+    second: {fileID: 2100000, guid: 59e73dbca9b2d0a4f814997edb055268, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Leather01_female
+    second: {fileID: 2100000, guid: c19123fafa046ab42811faa7b1927e16, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftMainLeggingStraps_female
+    second: {fileID: 2100000, guid: 1823b7a5e17aa7c4a9535597157096bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftMainLegging_female
+    second: {fileID: 2100000, guid: 97af9ff04a4bf1441a208bfd6df43b32, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftThighKnot_female
+    second: {fileID: 2100000, guid: 58454f47ea574cb48875e40297c78091, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftThighLeather_female
+    second: {fileID: 2100000, guid: 835c8774dbe64b2408cb6e892b33b687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftTopThighStrapTrim_female
+    second: {fileID: 2100000, guid: 4c5ebbee52573034ca26dd88bcf221c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftTopThighStrap_female
+    second: {fileID: 2100000, guid: 3ee4229e443f1a549b24b4670c7ecb86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Material____28_female
+    second: {fileID: 2100000, guid: da6f67c37f1e227449b4a9c8ec7b671a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal01_female
+    second: {fileID: 2100000, guid: 43cb9dcb8830c184e9597c3f29a3c8fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal02_female
+    second: {fileID: 2100000, guid: 7b04c6fdd88ccbe49bce33d11261c41a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal03_female
+    second: {fileID: 2100000, guid: b291179eb0fcb1145abfab1e11b32c34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronLeather_female
+    second: {fileID: 2100000, guid: dd411ffe4dca7b841af115eea11aab0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronMetal_female
+    second: {fileID: 2100000, guid: 2b987577614c02d40a205282fa7913da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronRing_female
+    second: {fileID: 2100000, guid: 98f3e4fcd50f60440a4fb1740ad00aa1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightMainLeggingStraps_female
+    second: {fileID: 2100000, guid: f967f90f3d4a9f343af25d71a7ac6ba1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightMainLegging_female
+    second: {fileID: 2100000, guid: 4d539ade5b3c08c48b0770f9f84dea55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightThighKnot_female
+    second: {fileID: 2100000, guid: 53132eff937389942902c6413bc7f3fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightThighLeather_female
+    second: {fileID: 2100000, guid: 59d1f24087e40734ea7643356e26e7d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightTopThighStrapTrim_female
+    second: {fileID: 2100000, guid: f203a6159e524f24ca99b2d6972c7040, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightTopThighStrap_female
+    second: {fileID: 2100000, guid: 2187474ee76015c47a8cc866bddf738b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Scalp_High_polytail_female_Transparency
+    second: {fileID: 2100000, guid: a0ae07de9aa80ad4ab04e513bc24b8e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Cornea_L_female
+    second: {fileID: 2100000, guid: 846f180fa36edd847b2651536a5d5669, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Cornea_R_female
+    second: {fileID: 2100000, guid: 2a5ff81bb7d4ca24a9b9e5bafda70df5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_L_female
+    second: {fileID: 2100000, guid: 8852ce9b8feb2cb4b9a8910919c1a641, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_R_female
+    second: {fileID: 2100000, guid: e20740f9fbd9d5946a400722938f05be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eyelash_female
+    second: {fileID: 2100000, guid: 83799318b923a9a438f5795409405ab5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Lower_Teeth_female
+    second: {fileID: 2100000, guid: 0a457f4548dc0784e864edab8d9e27d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Nails_female
+    second: {fileID: 2100000, guid: c32d8be91cde37f479c8db5c754f9fa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Arm_female
+    second: {fileID: 2100000, guid: 7039848f268cb0c449c7fe74c9915b1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Body_female
+    second: {fileID: 2100000, guid: 4ca287215720fe3449d8e1b1fe369ca6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Head_female
+    second: {fileID: 2100000, guid: a5f7f88a1ecdfde43bb3c8d5527bc177, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Leg_female
+    second: {fileID: 2100000, guid: b458aa992e6e20f46afed468d6c63a75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Tongue_female
+    second: {fileID: 2100000, guid: 042a66e2a4feae74fac44f5e589ddd8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Upper_Teeth_female
+    second: {fileID: 2100000, guid: f24088d49bb65054ca0e05f3e3c59435, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Stone_female
+    second: {fileID: 2100000, guid: 85b84101c6668ab48a980e31eb8bb751, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_TassetsLeather_female
+    second: {fileID: 2100000, guid: 069c265df2d5d1e4d980039b1f843455, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vis2k_TassetsMetal_female
+    second: {fileID: 2100000, guid: 414ec1f8264d2244bb7c84d0a30db338, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_01_Cords_female_Diffuse
+    second: {fileID: 2800000, guid: 55c7428f8e2d10d4eada30888f9a41e0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_01_Main_female_Diffuse
+    second: {fileID: 2800000, guid: 0dc8d7a6d60e37845a18b048e9713cb6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default(1)_1_0_0_female_Diffuse
+    second: {fileID: 2800000, guid: 7bdab1a3a946f7841949c46cca1674d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default(1)_1_0_0_female_Normal
+    second: {fileID: 2800000, guid: ff9b6fa7a200b8948b38ebf85e907c98, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default(1)_1_0_0_female_Specular
+    second: {fileID: 2800000, guid: 80cfd22ab26fa3142ab12e61eb6b7a9a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default_1_0_0_female_Diffuse
+    second: {fileID: 2800000, guid: eaae1b66709394b48b252b586a387ac3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default_1_0_0_female_Normal
+    second: {fileID: 2800000, guid: 1683fc829dc54ee4caea5d61d0d3e5af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_24_part1-01-Default_1_0_0_female_Specular
+    second: {fileID: 2800000, guid: 8d7a944cc0069554cbbd6f63fb8e18e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(3)_1_0_0_female_Diffuse
+    second: {fileID: 2800000, guid: a4635f4e6bdc24c498ba7cd9b9296ee6, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(3)_1_0_0_female_Normal
+    second: {fileID: 2800000, guid: c107b1fb166f8f54ea77f5d089d35fbf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(3)_1_0_0_female_Specular
+    second: {fileID: 2800000, guid: 97a952850d91a5e4b86a1b6ccf05c7f8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(6)_1_0_0_female_Diffuse
+    second: {fileID: 2800000, guid: 7a7a935a66df9b744952463a3fa4d5b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(6)_1_0_0_female_Normal
+    second: {fileID: 2800000, guid: 80f0fc3db50e0b5439081341e73fc544, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part1-01-Default(6)_1_0_0_female_Specular
+    second: {fileID: 2800000, guid: 6f5dd9a154507704eaa7966a1db10dbe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part2-01-Default(2)_1_0_0_female_Diffuse
+    second: {fileID: 2800000, guid: f95c5ad06c9b09748bf0a8662ab7f27e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part2-01-Default(2)_1_0_0_female_Normal
+    second: {fileID: 2800000, guid: dd7416f3713437448ad745d82cbcdb38, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_25_part2-01-Default(2)_1_0_0_female_Specular
+    second: {fileID: 2800000, guid: c37f63f9c12bb8f4d9c9481ff73d1bfc, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_BeltMetal_female_Diffuse
+    second: {fileID: 2800000, guid: d5df9a3747c557e4d9982ab27ff2538e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Belt_female_Diffuse
+    second: {fileID: 2800000, guid: 1138e3f662cecb740b3c6187e96253b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_BevorLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 0658dc0e3c3434f458d6cf41bf30f01a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Bottom_female_Diffuse
+    second: {fileID: 2800000, guid: f9443334ff4c7ea499a82c21c6515a5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Bottom_female_Normal
+    second: {fileID: 2800000, guid: 315008f0a2e9fd948a62653afa0c30f1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Top_female_Diffuse
+    second: {fileID: 2800000, guid: 9c03e581d8ac72549a5368bea66f80a5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Bikini_Top_female_Normal
+    second: {fileID: 2800000, guid: a87fedccb696ed146a5e5153b85d9791, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_FauldLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 954d0676eb65b8842a0371ff1e88985d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_FauldMetal_female_Diffuse
+    second: {fileID: 2800000, guid: 1b37c24fde657754e81a497a4d5e281c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_High_polytail_female_Transparency_Bump
+    second: {fileID: 2800000, guid: 4c4f4db7d910da549b1bb0c40fe04ded, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_High_polytail_female_Transparency_Diffuse
+    second: {fileID: 2800000, guid: d90dce10a367c3b40b82e2afa7368e13, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_High_polytail_female_Transparency_Specular
+    second: {fileID: 2800000, guid: 126c0db92b0198344970d41ba9b8d93d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Leather01_female_Diffuse
+    second: {fileID: 2800000, guid: 0ed9fbb044dcb5a41ad16f6fe371eb62, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Leather01_female_Diffuse_0001
+    second: {fileID: 2800000, guid: 712eb688c5528d7438c6d36fc9a90cd7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftMainLeggingStraps_female_Diffuse
+    second: {fileID: 2800000, guid: e4423757c08a166418fd6c69692d7294, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftMainLegging_female_Diffuse
+    second: {fileID: 2800000, guid: cbb751f7915274a439bf3778773a9550, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftThighKnot_female_Diffuse
+    second: {fileID: 2800000, guid: f6c86a9a54c64bb469997d1dca6d2f2f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftThighLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 273e0691e91ab58449e1fa2e211216dd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftTopThighStrapTrim_female_Diffuse
+    second: {fileID: 2800000, guid: 60725bc2605ce3143977ec6266578ba1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_LeftTopThighStrap_female_Diffuse
+    second: {fileID: 2800000, guid: 0ada456e7b5ed224ca10e212b703da8a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Material____28_female_Bump
+    second: {fileID: 2800000, guid: fbc8dcb636675414188983cc9908c363, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Material____28_female_Diffuse
+    second: {fileID: 2800000, guid: f99f76b87dd01514891185f309b77f3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal01_female_Diffuse
+    second: {fileID: 2800000, guid: 021e2d0413bd5f344819956f7cbed84c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal01_female_Diffuse_0001
+    second: {fileID: 2800000, guid: 9246c2bfa6d953e49bc8dde673916f3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal02_female_Diffuse
+    second: {fileID: 2800000, guid: 46e94589ac10e3942afa791649e20c98, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal02_female_Diffuse_0001
+    second: {fileID: 2800000, guid: c43ce428607ad314798b6b9bdc282017, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal03_female_Diffuse
+    second: {fileID: 2800000, guid: 14451373e47e3414ab4d75bcdc1c1b65, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Metal03_female_Diffuse_0001
+    second: {fileID: 2800000, guid: b4360a565c30a784f9c7d387b8e52b9a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 1dd927c83cb194b4ca441fe3967b6e80, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronMetal_female_Diffuse
+    second: {fileID: 2800000, guid: 7d3cb2b3f1257004bba8858ce83b2a44, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_PauldronRing_female_Diffuse
+    second: {fileID: 2800000, guid: aae46fdddbb30c44d81034c2bfba15d8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightMainLeggingStraps_female_Diffuse
+    second: {fileID: 2800000, guid: 1496fd61b821a3042a56794fb893d5d5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightMainLegging_female_Diffuse
+    second: {fileID: 2800000, guid: 7eeca35ec7dd7b5499a907ae094f89d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightThighKnot_female_Diffuse
+    second: {fileID: 2800000, guid: 869dd853197008042b08013f3ac5539a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightThighLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 99c5e132b1338ec4cbb0dc6b143bfafa, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightTopThighStrapTrim_female_Diffuse
+    second: {fileID: 2800000, guid: 55b74097a86b24b4fb68fad98a02f1ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_RightTopThighStrap_female_Diffuse
+    second: {fileID: 2800000, guid: caad5efa44298394aac4f5aa4daae37f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Scalp_High_polytail_female_Transparency_Bump
+    second: {fileID: 2800000, guid: bc8231358bf278446b9471d1493a4bd1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Scalp_High_polytail_female_Transparency_Diffuse
+    second: {fileID: 2800000, guid: 0bcf9bf051f3a2548b4238801188eaeb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Scalp_High_polytail_female_Transparency_Specular
+    second: {fileID: 2800000, guid: 99c12c5e3f0bf2148a62dc7f8a2eaf32, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Cornea_L_female_Diffuse
+    second: {fileID: 2800000, guid: 618d734386e8a61468a00d6404579517, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Cornea_R_female_Diffuse
+    second: {fileID: 2800000, guid: 8c7763c6bbbca784d8db20fe7b3b28a9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_L_female_Diffuse
+    second: {fileID: 2800000, guid: 57989219d6d58474d835eaa994eb667e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_L_female_Normal
+    second: {fileID: 2800000, guid: c490ef14f75b1764c9b2e0ae4459bae8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_R_female_Diffuse
+    second: {fileID: 2800000, guid: d44b5fd50217d6d4daf450fe7e97c34c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eye_R_female_Normal
+    second: {fileID: 2800000, guid: 3aa9cd83711ed78409a5f66f65c7619d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Eyelash_female_Diffuse
+    second: {fileID: 2800000, guid: 7a3b061450f68ee41987217a57c9b9eb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Lower_Teeth_female_Diffuse
+    second: {fileID: 2800000, guid: 8799f6bd433d0fd48a32c8a4ea961e7b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Lower_Teeth_female_Normal
+    second: {fileID: 2800000, guid: 6e31cb456c7c1284d8ac17ea95d058e4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Nails_female_Diffuse
+    second: {fileID: 2800000, guid: d97011f2703cd174e8e36217e597be23, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Nails_female_Normal
+    second: {fileID: 2800000, guid: 5e2a2dc83d26a6547b77efcf5d7f3f6f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Arm_female_Diffuse
+    second: {fileID: 2800000, guid: 71aeb74677ccd704fb413e6512f74ce3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Arm_female_Normal
+    second: {fileID: 2800000, guid: f7e3843b57f52544ab7c0b16e48e37e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Body_female_Diffuse
+    second: {fileID: 2800000, guid: 96c2c364cc669834f927c5e637075ad3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Body_female_Normal
+    second: {fileID: 2800000, guid: e92104fda8d40e6408821013121720ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Head_female_Diffuse
+    second: {fileID: 2800000, guid: a5fbb9c954920d0419cd17ec9035b47f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Head_female_Normal
+    second: {fileID: 2800000, guid: 8d1f1ad8ec073c74db97f1dc6a421968, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Leg_female_Diffuse
+    second: {fileID: 2800000, guid: 6784490b5a042ec4e81853e02341236c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Skin_Leg_female_Normal
+    second: {fileID: 2800000, guid: 6358e3dfe600a27488bf9becdbb45755, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Tongue_female_Diffuse
+    second: {fileID: 2800000, guid: 7a70214b58e0d5d49b6b889b5f4b96b9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Tongue_female_Normal
+    second: {fileID: 2800000, guid: f57fb4d55e2b3f0438e4a29703c6227f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Upper_Teeth_female_Diffuse
+    second: {fileID: 2800000, guid: 0e9a4cdd5dc24164ebd994340765b84f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Std_Upper_Teeth_female_Normal
+    second: {fileID: 2800000, guid: e03c34aa235f41944aa39659eda74759, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Stone_female_Diffuse
+    second: {fileID: 2800000, guid: 19d38097d0fef9c4cb36732b42183c70, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_Stone_female_Diffuse_0001
+    second: {fileID: 2800000, guid: ecf4aa14f184628419ce8805c6cf9670, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_TassetsLeather_female_Diffuse
+    second: {fileID: 2800000, guid: 442216d2b9d553248b6807843f1f3889, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vis2k_TassetsMetal_female_Diffuse
+    second: {fileID: 2800000, guid: 1df83272e5540dc41ad5060cd71a172f, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default
+      takeName: Default
+      firstFrame: 0
+      lastFrame: 0
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: vis2k_CC_Base_Hip_female
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Thigh_female
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Thigh_female
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Calf_female
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Calf_female
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Foot_female
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Foot_female
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_Waist_female
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_Spine01_female
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_NeckTwist01_female
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_Head_female
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Clavicle_female
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Clavicle_female
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Upperarm_female
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Upperarm_female
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Forearm_female
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Forearm_female
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Hand_female
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Hand_female
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_ToeBase_female
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_ToeBase_female
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Eye_female
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Eye_female
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_JawRoot_female
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Thumb1_female
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Thumb2_female
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Thumb3_female
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Index1_female
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Index2_female
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Index3_female
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Mid1_female
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Mid2_female
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Mid3_female
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Ring1_female
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Ring2_female
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Ring3_female
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Pinky1_female
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Pinky2_female
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_L_Pinky3_female
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Thumb1_female
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Thumb2_female
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Thumb3_female
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Index1_female
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Index2_female
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Index3_female
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Mid1_female
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Mid2_female
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Mid3_female
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Ring1_female
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Ring2_female
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Ring3_female
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Pinky1_female
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Pinky2_female
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_R_Pinky3_female
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: vis2k_CC_Base_Spine02_female
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: female(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_CC_Base_Tongue_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_CC_Base_Teeth_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_CC_Base_BoneRoot_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_CC_Base_Hip_female
+      parentName: vis2k_CC_Base_BoneRoot_female
+      position: {x: -0.000002727758, y: 0.023793535, z: 1.0384316}
+      rotation: {x: 0.7071067, y: -0.000044966077, z: 0.00003920865, w: 0.7071068}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: vis2k_CC_Base_Pelvis_female
+      parentName: vis2k_CC_Base_Hip_female
+      position: {x: 9.3132255e-12, y: 0.000000076293944, z: 0.0000000047683715}
+      rotation: {x: 0.103366345, y: -0.0000006550905, z: 0.000006305954, w: 0.9946434}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Thigh_female
+      parentName: vis2k_CC_Base_Pelvis_female
+      position: {x: 0.09639236, y: -0.020460967, z: -0.0071049877}
+      rotation: {x: -0.00088350096, y: 0.11175435, z: 0.99369174, w: 0.009324642}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Calf_female
+      parentName: vis2k_CC_Base_R_Thigh_female
+      position: {x: 0.0000025892257, y: 0.46220046, z: -0.0000037276743}
+      rotation: {x: -0.021465756, y: 0.00015985078, z: -0.0015652056, w: 0.9997684}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: vis2k_CC_Base_R_KneeShareBone_female
+      parentName: vis2k_CC_Base_R_Calf_female
+      position: {x: 0.000000028610229, y: -0.00000019073485, z: 0.0000000047683715}
+      rotation: {x: 0.00033544356, y: 0.016116025, z: 0.0000047688636, w: 0.9998701}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: vis2k_CC_Base_R_CalfTwist01_female
+      parentName: vis2k_CC_Base_R_Calf_female
+      position: {x: 0.000000028610229, y: -0.00000019073485, z: 0.0000000047683715}
+      rotation: {x: -0.00006955162, y: 0.00001891724, z: 0.000011844095, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_R_CalfTwist02_female
+      parentName: vis2k_CC_Base_R_CalfTwist01_female
+      position: {x: 0.000004134178, y: 0.23475833, z: 0.0000595808}
+      rotation: {x: 0.00006694721, y: 0.0006634493, z: -0.000011530673, w: 0.9999998}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Foot_female
+      parentName: vis2k_CC_Base_R_Calf_female
+      position: {x: 0.000051455496, y: 0.46951598, z: 0.000103116035}
+      rotation: {x: 0.61544335, y: -0.041170307, z: 0.043028124, w: 0.7859282}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1}
+    - name: vis2k_CC_Base_R_ToeBase_female
+      parentName: vis2k_CC_Base_R_Foot_female
+      position: {x: -0.000006160735, y: 0.14293768, z: -0.000029687877}
+      rotation: {x: 0.16912809, y: 0.02629301, z: -0.031218154, w: 0.9847486}
+      scale: {x: 1, y: 1.0000004, z: 1}
+    - name: vis2k_CC_Base_R_BigToe1_female
+      parentName: vis2k_CC_Base_R_ToeBase_female
+      position: {x: 0.03525326, y: 0.020133104, z: -0.00043116568}
+      rotation: {x: -0.030175233, y: 0.00016025188, z: 0.023229722, w: 0.9992747}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: vis2k_CC_Base_R_IndexToe1_female
+      parentName: vis2k_CC_Base_R_ToeBase_female
+      position: {x: 0.015244379, y: 0.022099972, z: 0.0024552965}
+      rotation: {x: -0.20489635, y: 0.043358274, z: 0.02106231, w: 0.97759604}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1}
+    - name: vis2k_CC_Base_R_MidToe1_female
+      parentName: vis2k_CC_Base_R_ToeBase_female
+      position: {x: -0.000005073547, y: 0.021232825, z: -0.0000040626524}
+      rotation: {x: -0.19258963, y: 0.036786135, z: 0.01040481, w: 0.98053443}
+      scale: {x: 1, y: 1.0000005, z: 1.0000002}
+    - name: vis2k_CC_Base_R_PinkyToe1_female
+      parentName: vis2k_CC_Base_R_ToeBase_female
+      position: {x: -0.026702985, y: 0.0034259509, z: -0.003991089}
+      rotation: {x: -0.23880635, y: 0.031826217, z: -0.02519788, w: 0.9702184}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: vis2k_CC_Base_R_RingToe1_female
+      parentName: vis2k_CC_Base_R_ToeBase_female
+      position: {x: -0.013679781, y: 0.012128696, z: -0.00054829597}
+      rotation: {x: -0.26498213, y: 0.04824661, z: -0.003892532, w: 0.9630377}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: vis2k_CC_Base_R_ToeBaseShareBone_female
+      parentName: vis2k_CC_Base_R_Foot_female
+      position: {x: -0.000006103515, y: 0.14293773, z: -0.000029630655}
+      rotation: {x: 0.1691194, y: 0.026475936, z: -0.031178478, w: 0.98474646}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: vis2k_CC_Base_R_ThighTwist01_female
+      parentName: vis2k_CC_Base_R_Thigh_female
+      position: {x: 0.000000023841856, y: 0.000000076293944, z: -0.000000044107438}
+      rotation: {x: -0.000015211756, y: 0.00001447498, z: -0.000008398201, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: vis2k_CC_Base_R_ThighTwist02_female
+      parentName: vis2k_CC_Base_R_ThighTwist01_female
+      position: {x: -0.0000025749207, y: 0.23109901, z: 0.0000052773953}
+      rotation: {x: -0.0000002575107, y: -0.000017600729, z: 0.0000002724117, w: 1}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: vis2k_CC_Base_L_Thigh_female
+      parentName: vis2k_CC_Base_Pelvis_female
+      position: {x: -0.09639257, y: -0.020458527, z: -0.007103557}
+      rotation: {x: 0.00088550133, y: 0.11100273, z: 0.99377733, w: -0.009181792}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Calf_female
+      parentName: vis2k_CC_Base_L_Thigh_female
+      position: {x: -0.000012993813, y: 0.4621247, z: 0.000005124807}
+      rotation: {x: -0.02016748, y: -0.00017101633, z: 0.0015831266, w: 0.9997954}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_L_KneeShareBone_female
+      parentName: vis2k_CC_Base_L_Calf_female
+      position: {x: 0.000000038146972, y: -0.000000114440915, z: -0.000000014305114}
+      rotation: {x: -0.00026600529, y: -0.016101182, z: -0.000014349799, w: 0.99987036}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: vis2k_CC_Base_L_CalfTwist01_female
+      parentName: vis2k_CC_Base_L_Calf_female
+      position: {x: 0.000000038146972, y: -0.000000114440915, z: -0.000000014305114}
+      rotation: {x: 0.0000011306253, y: -0.000004508226, z: 0.00000015180561, w: 1}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: vis2k_CC_Base_L_CalfTwist02_female
+      parentName: vis2k_CC_Base_L_CalfTwist01_female
+      position: {x: 0.0000078916555, y: 0.23471868, z: 0.000008287431}
+      rotation: {x: -0.0000036563747, y: -0.00069267896, z: -0.0000004395608, w: 0.99999976}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: vis2k_CC_Base_L_Foot_female
+      parentName: vis2k_CC_Base_L_Calf_female
+      position: {x: -0.0000433445, y: 0.46943778, z: 0.00022134304}
+      rotation: {x: 0.61422974, y: 0.041217797, z: -0.043050103, w: 0.7868734}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: vis2k_CC_Base_L_ToeBaseShareBone_female
+      parentName: vis2k_CC_Base_L_Foot_female
+      position: {x: 0.000033979417, y: 0.14269382, z: 0.00015275001}
+      rotation: {x: 0.1696138, y: -0.026531724, z: 0.03133733, w: 0.98465484}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: vis2k_CC_Base_L_ToeBase_female
+      parentName: vis2k_CC_Base_L_Foot_female
+      position: {x: 0.000033912656, y: 0.14269368, z: 0.00015285969}
+      rotation: {x: 0.16976488, y: -0.026329072, z: 0.03129404, w: 0.98463565}
+      scale: {x: 0.99999994, y: 0.9999999, z: 1.0000002}
+    - name: vis2k_CC_Base_L_BigToe1_female
+      parentName: vis2k_CC_Base_L_ToeBase_female
+      position: {x: -0.035250578, y: 0.020120163, z: -0.00042713166}
+      rotation: {x: -0.02983981, y: -0.00015730527, z: -0.023368053, w: 0.99928147}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_IndexToe1_female
+      parentName: vis2k_CC_Base_L_ToeBase_female
+      position: {x: -0.015247044, y: 0.022076482, z: 0.002454295}
+      rotation: {x: -0.2050731, y: -0.043321658, z: -0.021150358, w: 0.9775587}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_MidToe1_female
+      parentName: vis2k_CC_Base_L_ToeBase_female
+      position: {x: -0.0000007629394, y: 0.021218594, z: -0.0000044393537}
+      rotation: {x: -0.19253458, y: -0.036686733, z: -0.0101520065, w: 0.9805516}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_L_PinkyToe1_female
+      parentName: vis2k_CC_Base_L_ToeBase_female
+      position: {x: 0.026696414, y: 0.003430128, z: -0.0039914036}
+      rotation: {x: -0.23867977, y: -0.03178477, z: 0.025273005, w: 0.97024894}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_L_RingToe1_female
+      parentName: vis2k_CC_Base_L_ToeBase_female
+      position: {x: 0.013674287, y: 0.01212635, z: -0.00054775237}
+      rotation: {x: -0.26511437, y: -0.048315383, z: 0.0034837965, w: 0.9629994}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_ThighTwist01_female
+      parentName: vis2k_CC_Base_L_Thigh_female
+      position: {x: 0.000000019073486, y: 0, z: -0.00000004172325}
+      rotation: {x: -0.000008631031, y: -0.000011412352, z: 0.00006335228, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: vis2k_CC_Base_L_ThighTwist02_female
+      parentName: vis2k_CC_Base_L_ThighTwist01_female
+      position: {x: 0.000022754672, y: 0.23106378, z: 0.0000064015394}
+      rotation: {x: -0.000006264075, y: 0.000014865379, z: -0.000054629523, w: 1}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: vis2k_CC_Base_Waist_female
+      parentName: vis2k_CC_Base_Hip_female
+      position: {x: -0.0000009154435, y: 0.07438255, z: 0.015626801}
+      rotation: {x: 0.13727583, y: -0.0000085615675, z: -0.000057855978, w: 0.9905329}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_Spine01_female
+      parentName: vis2k_CC_Base_Waist_female
+      position: {x: 0.000000038805883, y: 0.041747663, z: 0.0000017166137}
+      rotation: {x: -0.1747269, y: -0.00000717943, z: -0.000016422237, w: 0.98461694}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_Spine02_female
+      parentName: vis2k_CC_Base_Spine01_female
+      position: {x: 0.0000055044143, y: 0.14270042, z: 0.000036153793}
+      rotation: {x: -0.057421286, y: 0.000004712584, z: 0.000022198752, w: 0.99835}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_NeckTwist01_female
+      parentName: vis2k_CC_Base_Spine02_female
+      position: {x: -0.0000020445714, y: 0.28093222, z: 0.000012378692}
+      rotation: {x: 0.22490871, y: 0.000019870346, z: -0.000030281599, w: 0.9743799}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_NeckTwist02_female
+      parentName: vis2k_CC_Base_NeckTwist01_female
+      position: {x: 0.000000049276277, y: 0.038084563, z: 0.000010604858}
+      rotation: {x: 0.01608595, y: 0.000009068794, z: 0.000031762473, w: 0.99987066}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_Head_female
+      parentName: vis2k_CC_Base_NeckTwist02_female
+      position: {x: 0.000000008749775, y: 0.037333984, z: 0.00000019073485}
+      rotation: {x: -0.1470068, y: -0.000036881658, z: 0.000006934658, w: 0.9891355}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_FacialBone_female
+      parentName: vis2k_CC_Base_Head_female
+      position: {x: -2.3283064e-12, y: -0.00000015258789, z: -0.000000047683713}
+      rotation: {x: 0.49999386, y: -0.49999395, z: -0.5000119, w: 0.5000003}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: vis2k_CC_Base_UpperJaw_female
+      parentName: vis2k_CC_Base_FacialBone_female
+      position: {x: -0.031311493, y: 0.0641552, z: 0.0000015956623}
+      rotation: {x: 0.000036503985, y: 0.000039175608, z: -0.70711, w: 0.70710355}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: vis2k_CC_Base_Teeth01_female
+      parentName: vis2k_CC_Base_UpperJaw_female
+      position: {x: -0.002223692, y: -0.00080551143, z: 0.000005252926}
+      rotation: {x: 1, y: 0.000010331745, z: 0.000033989163, w: 0.000010918609}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: vis2k_CC_Base_L_Eye_female
+      parentName: vis2k_CC_Base_FacialBone_female
+      position: {x: -0.07630966, y: 0.07316833, z: 0.03218573}
+      rotation: {x: 0.70705587, y: -0.008484939, z: -0.70705587, w: -0.008484939}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: vis2k_CC_Base_R_Eye_female
+      parentName: vis2k_CC_Base_FacialBone_female
+      position: {x: -0.076305084, y: 0.07316787, z: -0.03218633}
+      rotation: {x: 0.7070559, y: -0.008480514, z: -0.7070559, w: -0.008480514}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_JawRoot_female
+      parentName: vis2k_CC_Base_FacialBone_female
+      position: {x: -0.015830383, y: 0.024241704, z: 0.0000014878466}
+      rotation: {x: -0.000050393188, y: 0.000050742383, z: -0.7070909, w: 0.70712274}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_Tongue01_female
+      parentName: vis2k_CC_Base_JawRoot_female
+      position: {x: -0.031037316, y: 0.009470367, z: 0.0000012893602}
+      rotation: {x: 0.0000052290793, y: 0.0000032684627, z: -0.011723889, w: 0.9999313}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: vis2k_CC_Base_Tongue02_female
+      parentName: vis2k_CC_Base_Tongue01_female
+      position: {x: -0.011076791, y: -0.0000024414062, z: -0.0000000013597309}
+      rotation: {x: -0.0000031889585, y: 0.000014037792, z: -0.10558772, w: 0.99441004}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: vis2k_CC_Base_Tongue03_female
+      parentName: vis2k_CC_Base_Tongue02_female
+      position: {x: -0.017139167, y: -0.0000061035153, z: 0.00000004099682}
+      rotation: {x: -0.0000012962279, y: 0.0000001429794, z: -0.00025355074, w: 1}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_Teeth02_female
+      parentName: vis2k_CC_Base_JawRoot_female
+      position: {x: -0.03325015, y: 0.007619171, z: 0.000009174701}
+      rotation: {x: 1, y: 0.0000023265966, z: -0.000097154705, w: -0.00008002776}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_RibsTwist_female
+      parentName: vis2k_CC_Base_Spine02_female
+      position: {x: -0.105117604, y: 0.0647483, z: 0.11911432}
+      rotation: {x: -0.000008959019, y: 0.636629, z: 0.7711703, w: -0.0000012375118}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Breast_female
+      parentName: vis2k_CC_Base_L_RibsTwist_female
+      position: {x: -0.00000029563904, y: 0.019999972, z: -0.0000036621093}
+      rotation: {x: 0.0000000782529, y: -0, z: -0, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_R_RibsTwist_female
+      parentName: vis2k_CC_Base_Spine02_female
+      position: {x: 0.105020866, y: 0.064822, z: 0.11892687}
+      rotation: {x: 0.0000009994873, y: 0.636629, z: 0.7711703, w: 0.000009362425}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Breast_female
+      parentName: vis2k_CC_Base_R_RibsTwist_female
+      position: {x: -0.0000003528595, y: 0.01999999, z: -0.0000035095213}
+      rotation: {x: 0.00000008189816, y: -7.9995196e-22, z: 0.00000022420446, w: 1}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Clavicle_female
+      parentName: vis2k_CC_Base_Spine02_female
+      position: {x: -0.050451774, y: 0.22021446, z: -0.0007953834}
+      rotation: {x: -0.01800684, y: -0.1541396, z: 0.68494016, w: 0.7118804}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Upperarm_female
+      parentName: vis2k_CC_Base_L_Clavicle_female
+      position: {x: -0.00000061035155, y: 0.10802301, z: 0.0000011634827}
+      rotation: {x: 0.124248214, y: 0.0010471741, z: 0.0144319115, w: 0.99214566}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Forearm_female
+      parentName: vis2k_CC_Base_L_Upperarm_female
+      position: {x: -0.0000015258788, y: 0.2994218, z: 0.0000011110305}
+      rotation: {x: 0.0007336402, y: -0.00002309853, z: -0.006635199, w: 0.9999777}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Hand_female
+      parentName: vis2k_CC_Base_L_Forearm_female
+      position: {x: -0.0000076293945, y: 0.26041472, z: 0.0000058889386}
+      rotation: {x: -0.049229737, y: 0.00009516284, z: 0.0012398929, w: 0.9987867}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Thumb1_female
+      parentName: vis2k_CC_Base_L_Hand_female
+      position: {x: -0.006081085, y: 0.016732635, z: 0.024777958}
+      rotation: {x: 0.4064716, y: 0.11455367, z: 0.060584024, w: 0.9044268}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: vis2k_CC_Base_L_Thumb2_female
+      parentName: vis2k_CC_Base_L_Thumb1_female
+      position: {x: 0.000009155272, y: 0.054016832, z: 0.000012941359}
+      rotation: {x: -0.034319993, y: 0.0072227707, z: -0.007652621, w: 0.9993555}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Thumb3_female
+      parentName: vis2k_CC_Base_L_Thumb2_female
+      position: {x: -0.000075378426, y: 0.026612895, z: -0.000029220582}
+      rotation: {x: -0.0021169207, y: -0.000028259034, z: -0.022010906, w: 0.9997555}
+      scale: {x: 1.0000002, y: 1.0000004, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Pinky1_female
+      parentName: vis2k_CC_Base_L_Hand_female
+      position: {x: -0.010399475, y: 0.090327606, z: -0.016316144}
+      rotation: {x: 0.063426085, y: -0.0018292967, z: 0.025760682, w: 0.99765235}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Pinky2_female
+      parentName: vis2k_CC_Base_L_Pinky1_female
+      position: {x: -0.000030670166, y: 0.028144836, z: 0.000051050185}
+      rotation: {x: -0.009739343, y: 0.0014196306, z: 0.0001987763, w: 0.9999516}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Pinky3_female
+      parentName: vis2k_CC_Base_L_Pinky2_female
+      position: {x: -0.000012512207, y: 0.018360976, z: -0.0000066852567}
+      rotation: {x: 0.04282293, y: 0.0026465268, z: 0.089705124, w: 0.9950438}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Ring1_female
+      parentName: vis2k_CC_Base_L_Hand_female
+      position: {x: -0.000018157958, y: 0.092883684, z: 0.0000024592875}
+      rotation: {x: 0.07446218, y: -0.0019457544, z: 0.028877037, w: 0.99680376}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_Ring2_female
+      parentName: vis2k_CC_Base_L_Ring1_female
+      position: {x: -0.0002947998, y: 0.038515855, z: 0.0001251316}
+      rotation: {x: -0.014753514, y: 0.00036678667, z: 0.0048148986, w: 0.99987954}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Ring3_female
+      parentName: vis2k_CC_Base_L_Ring2_female
+      position: {x: 0.000045471184, y: 0.023900755, z: -0.000019779203}
+      rotation: {x: 0.021214593, y: 0.0016431378, z: 0.066714056, w: 0.99754524}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Index1_female
+      parentName: vis2k_CC_Base_L_Hand_female
+      position: {x: 0.010157318, y: 0.08851746, z: 0.041429833}
+      rotation: {x: 0.10019204, y: 0.00100187, z: 0.03393708, w: 0.9943887}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: vis2k_CC_Base_L_Index2_female
+      parentName: vis2k_CC_Base_L_Index1_female
+      position: {x: -0.00022338866, y: 0.037280846, z: -0.000025110245}
+      rotation: {x: -0.03771715, y: -0.0049261143, z: 0.0042722314, w: 0.9992672}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Index3_female
+      parentName: vis2k_CC_Base_L_Index2_female
+      position: {x: 0.000050048828, y: 0.023566628, z: 0.00004492283}
+      rotation: {x: -0.009789315, y: 0.0008245416, z: 0.0785523, w: 0.99686164}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Mid1_female
+      parentName: vis2k_CC_Base_L_Hand_female
+      position: {x: 0.008520813, y: 0.09227005, z: 0.019378673}
+      rotation: {x: 0.082270086, y: 0.0012598732, z: 0.03335029, w: 0.99605113}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: vis2k_CC_Base_L_Mid2_female
+      parentName: vis2k_CC_Base_L_Mid1_female
+      position: {x: -0.00012374877, y: 0.046673432, z: 0.000034732817}
+      rotation: {x: -0.023097893, y: -0.0028625254, z: 0.0017100775, w: 0.99972767}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: vis2k_CC_Base_L_Mid3_female
+      parentName: vis2k_CC_Base_L_Mid2_female
+      position: {x: 0.000018615723, y: 0.025604172, z: -0.000009679794}
+      rotation: {x: 0.016418688, y: 0.0005962568, z: 0.064024754, w: 0.9978131}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: vis2k_CC_Base_L_ForearmTwist01_female
+      parentName: vis2k_CC_Base_L_Forearm_female
+      position: {x: 0.00000045776366, y: 0.00000015258789, z: -0.000000014305114}
+      rotation: {x: -0.0000006735551, y: -0.000004364475, z: 0.00000014167739, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_L_ForearmTwist02_female
+      parentName: vis2k_CC_Base_L_ForearmTwist01_female
+      position: {x: -0.00000213623, y: 0.1302073, z: 0.0000030899043}
+      rotation: {x: -0.00000447579, y: -0.0000022542147, z: 0.000002324435, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000004}
+    - name: vis2k_CC_Base_L_ElbowShareBone_female
+      parentName: vis2k_CC_Base_L_Forearm_female
+      position: {x: 0.00000045776366, y: 0.00000015258789, z: -0.000000014305114}
+      rotation: {x: -0.00000040330133, y: -0.0000006105617, z: -0.00000022308079,
+        w: 1}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000004}
+    - name: vis2k_CC_Base_L_UpperarmTwist01_female
+      parentName: vis2k_CC_Base_L_Upperarm_female
+      position: {x: -0.00000015258789, y: 0.000000019073486, z: -0.000000023841856}
+      rotation: {x: 0.00000076553476, y: -0.0000018550267, z: 0.0000004807951, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000002}
+    - name: vis2k_CC_Base_L_UpperarmTwist02_female
+      parentName: vis2k_CC_Base_L_UpperarmTwist01_female
+      position: {x: 0.000001220703, y: 0.14971109, z: -0.0000010299681}
+      rotation: {x: -0.000001655997, y: 0.00000035786056, z: -0.0000009739302, w: 1}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Clavicle_female
+      parentName: vis2k_CC_Base_Spine02_female
+      position: {x: 0.05045074, y: 0.2202143, z: -0.00079626084}
+      rotation: {x: -0.018007813, y: 0.1541272, z: -0.68495953, w: 0.7118645}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Upperarm_female
+      parentName: vis2k_CC_Base_R_Clavicle_female
+      position: {x: 0.0000010681152, y: 0.108030744, z: 0.0000010228157}
+      rotation: {x: 0.12424125, y: -0.0010372344, z: -0.014418677, w: 0.99214673}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Forearm_female
+      parentName: vis2k_CC_Base_R_Upperarm_female
+      position: {x: 0.0000010681152, y: 0.29941997, z: 0.0000015068053}
+      rotation: {x: 0.00077354704, y: 0.000021759453, z: 0.0066480334, w: 0.99997765}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_R_ElbowShareBone_female
+      parentName: vis2k_CC_Base_R_Forearm_female
+      position: {x: -0.00000015258787, y: 0.00000015258787, z: -0.000000019073484}
+      rotation: {x: -0.0000021573794, y: 0.0000038025237, z: -0.0000007134658, w: 1}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000002}
+    - name: vis2k_CC_Base_R_ForearmTwist01_female
+      parentName: vis2k_CC_Base_R_Forearm_female
+      position: {x: -0.00000015258787, y: 0.00000015258787, z: -0.000000019073484}
+      rotation: {x: -0.00000034072147, y: -0.000004217726, z: -0.0000003048334, w: 1}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: vis2k_CC_Base_R_ForearmTwist02_female
+      parentName: vis2k_CC_Base_R_ForearmTwist01_female
+      position: {x: -0.0000010681152, y: 0.13020782, z: 0.0000018930435}
+      rotation: {x: -0.0000046827113, y: -0.0000017098714, z: -0.0000023460595, w: 1}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Hand_female
+      parentName: vis2k_CC_Base_R_Forearm_female
+      position: {x: 0.00000091552727, y: 0.2604154, z: -0.000001068115}
+      rotation: {x: -0.04936974, y: -0.00009405496, z: -0.0013327647, w: 0.9987797}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000004}
+    - name: vis2k_CC_Base_R_Mid1_female
+      parentName: vis2k_CC_Base_R_Hand_female
+      position: {x: -0.008520814, y: 0.09226258, z: 0.019373812}
+      rotation: {x: 0.08224174, y: -0.0012477578, z: -0.033357058, w: 0.9960532}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: vis2k_CC_Base_R_Mid2_female
+      parentName: vis2k_CC_Base_R_Mid1_female
+      position: {x: 0.00012329101, y: 0.046667747, z: 0.000034818648}
+      rotation: {x: -0.023009477, y: 0.0028721765, z: -0.001680959, w: 0.99972975}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: vis2k_CC_Base_R_Mid3_female
+      parentName: vis2k_CC_Base_R_Mid2_female
+      position: {x: -0.000017700195, y: 0.025606612, z: -0.000009088516}
+      rotation: {x: 0.016392404, y: -0.00061465526, z: -0.064057805, w: 0.9978114}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Index1_female
+      parentName: vis2k_CC_Base_R_Hand_female
+      position: {x: -0.0101550305, y: 0.08850716, z: 0.04142392}
+      rotation: {x: 0.10027354, y: -0.0010152152, z: -0.033738308, w: 0.9943872}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: vis2k_CC_Base_R_Index2_female
+      parentName: vis2k_CC_Base_R_Index1_female
+      position: {x: 0.0002380371, y: 0.03727928, z: -0.000024957657}
+      rotation: {x: -0.037750233, y: 0.0049200277, z: -0.0044551548, w: 0.9992652}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Index3_female
+      parentName: vis2k_CC_Base_R_Index2_female
+      position: {x: -0.000049285893, y: 0.023563692, z: 0.000044765475}
+      rotation: {x: -0.009759058, y: -0.0008315368, z: -0.07848871, w: 0.9968669}
+      scale: {x: 0.9999998, y: 0.99999976, z: 1}
+    - name: vis2k_CC_Base_R_Ring1_female
+      parentName: vis2k_CC_Base_R_Hand_female
+      position: {x: 0.0000189209, y: 0.09288071, z: -0.0000018590691}
+      rotation: {x: 0.07451281, y: 0.0019589316, z: -0.028963426, w: 0.9967975}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Ring2_female
+      parentName: vis2k_CC_Base_R_Ring1_female
+      position: {x: 0.00029006958, y: 0.038514785, z: 0.00012564659}
+      rotation: {x: -0.014802922, y: -0.00036816587, z: -0.0047140233, w: 0.9998793}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Ring3_female
+      parentName: vis2k_CC_Base_R_Ring2_female
+      position: {x: -0.00004333496, y: 0.02389862, z: -0.00001800537}
+      rotation: {x: 0.021380236, y: -0.0016577311, z: -0.06650828, w: 0.99755543}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Pinky1_female
+      parentName: vis2k_CC_Base_R_Hand_female
+      position: {x: 0.010401765, y: 0.09032731, z: -0.016320454}
+      rotation: {x: 0.063542776, y: 0.0018261487, z: -0.025658876, w: 0.9976475}
+      scale: {x: 1, y: 0.99999976, z: 0.99999994}
+    - name: vis2k_CC_Base_R_Pinky2_female
+      parentName: vis2k_CC_Base_R_Pinky1_female
+      position: {x: 0.000031280517, y: 0.02814415, z: 0.000049314498}
+      rotation: {x: -0.009762705, y: -0.0014209809, z: -0.00021454196, w: 0.9999513}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000002}
+    - name: vis2k_CC_Base_R_Pinky3_female
+      parentName: vis2k_CC_Base_R_Pinky2_female
+      position: {x: 0.000012512207, y: 0.01836052, z: -0.0000067710876}
+      rotation: {x: 0.04269942, y: -0.0026426879, z: -0.08957467, w: 0.9950609}
+      scale: {x: 1, y: 0.9999999, z: 1.0000001}
+    - name: vis2k_CC_Base_R_Thumb1_female
+      parentName: vis2k_CC_Base_R_Hand_female
+      position: {x: 0.0060925297, y: 0.016729968, z: 0.024765508}
+      rotation: {x: 0.40646306, y: -0.114481255, z: -0.060564507, w: 0.9044411}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: vis2k_CC_Base_R_Thumb2_female
+      parentName: vis2k_CC_Base_R_Thumb1_female
+      position: {x: -0.00000793457, y: 0.054007147, z: 0.000012807845}
+      rotation: {x: -0.034324035, y: -0.007243131, z: 0.0076324306, w: 0.9993554}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: vis2k_CC_Base_R_Thumb3_female
+      parentName: vis2k_CC_Base_R_Thumb2_female
+      position: {x: 0.000075378426, y: 0.026602328, z: -0.000029191973}
+      rotation: {x: -0.0020627498, y: 0.000028155451, z: 0.022136196, w: 0.9997529}
+      scale: {x: 1, y: 0.99999994, z: 0.9999999}
+    - name: vis2k_CC_Base_R_UpperarmTwist01_female
+      parentName: vis2k_CC_Base_R_Upperarm_female
+      position: {x: -0.00000015258789, y: 0.000000038146972, z: -0.000000028610229}
+      rotation: {x: 0.0000004887771, y: -0.0000020966977, z: -0.00000019348225, w: 1}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: vis2k_CC_Base_R_UpperarmTwist02_female
+      parentName: vis2k_CC_Base_R_UpperarmTwist01_female
+      position: {x: 0.00000045776366, y: 0.14970988, z: 0.00000044345856}
+      rotation: {x: -0.0000014776263, y: -0.00000017714036, z: 0.00000073434774, w: 1}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: vis2k_CC_Base_Body_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_CC_Base_Eye_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Sepatu_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Sayap_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Hood_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Celana_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Coat_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Bikini_Boottom_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Bikini_Top_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_top1_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_top_armor_001_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_baris_ust_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_arm_legging_R_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_arm_legging_L_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_armar_belt_001_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_gloves_R_001_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_gloves_L_001_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: vis2k_Hair_female
+      parentName: female(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
