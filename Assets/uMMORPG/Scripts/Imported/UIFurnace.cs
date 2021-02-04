@@ -7,6 +7,7 @@ public class UIFurnace : MonoBehaviour
     public GameObject panel;
     public Slider progressSlider;
     public Button quitButton;
+    public Furnace furnace;
 
 
     [Header("Ingredient UI Slot")]
@@ -46,21 +47,23 @@ public class UIFurnace : MonoBehaviour
 
     public void Show()
     {
+        Player player = Player.localPlayer;
         panel.SetActive(true);
+        
+
         //quitButton.onClick.SetListener(NetworkManagerMMO.Quit);
     }
 
-    /*void Update()
+    void Update()
     {
         Player player = Player.localPlayer;
         if (player)
         {
-            if (player.interaction.current != null &&
+            if (panel.activeSelf == true && player.interaction.current != null &&
                 ((NetworkBehaviour)player.interaction.current).GetComponent<Furnace>() != null)
             {
                 panel.SetActive(true);
-
-                Furnace furnace = ((NetworkBehaviour)player.interaction.current).GetComponent<Furnace>();
+                furnace = ((NetworkBehaviour)player.interaction.current).GetComponent<Furnace>();
 
                 // refresh ingredient slot
                 if (furnace.ingredientSlot.amount > 0)
@@ -90,7 +93,7 @@ public class UIFurnace : MonoBehaviour
                 else
                 {
                     // refresh invalid item
-                    ingredientToolip.enabled = false;
+                    //ingredientToolip.enabled = false;
                     ingredient.dragable = false;
                     ingredientImage.color = Color.clear;
                     ingredientImage.sprite = null;
@@ -175,5 +178,5 @@ public class UIFurnace : MonoBehaviour
             }
             else panel.SetActive(false);
         }
-    }*/
+    }
 }

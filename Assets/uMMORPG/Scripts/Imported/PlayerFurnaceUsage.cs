@@ -305,6 +305,7 @@ public class PlayerFurnaceUsage : NetworkBehaviourNonAlloc
     // drag & drop: inventory<->furnace ingredient /////////////////////////////
     void OnDragAndDrop_InventorySlot_FurnaceIngredientSlot(int[] slotIndices)
     {
+        //Debug.Log("Inventory Slot to Furnace Ingredient Slot");
         // slotIndices[0] = slotFrom; slotIndices[1] = slotTo
         if (interaction.current != null)
         {
@@ -352,6 +353,7 @@ public class PlayerFurnaceUsage : NetworkBehaviourNonAlloc
     // drag & drop: inventory<->furnace fuel ///////////////////////////////////
     void OnDragAndDrop_InventorySlot_FurnaceFuelSlot(int[] slotIndices)
     {
+        //Debug.Log("Inventory Slot to Furnace Fuel Slot");
         // slotIndices[0] = slotFrom; slotIndices[1] = slotTo
         if (interaction.current != null)
         {
