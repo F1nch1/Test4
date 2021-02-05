@@ -69,7 +69,7 @@ public class TargetHealSkill : HealSkill
         if (caster.target != null && caster.target.health.current > 0)
         {
             caster.target.health.current += healsHealth.Get(skillLevel);
-            caster.target.mana.current += healsMana.Get(skillLevel);
+            //caster.target.mana.current += healsMana.Get(skillLevel);
 
             // show effect on target
             SpawnEffect(caster, caster.target);

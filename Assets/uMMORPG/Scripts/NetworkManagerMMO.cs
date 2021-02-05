@@ -381,7 +381,7 @@ public partial class NetworkManagerMMO : NetworkManager
             player.equipment.slots.Add(info.defaultItem.item != null ? new ItemSlot(new Item(info.defaultItem.item), info.defaultItem.amount) : new ItemSlot());
         }
         player.health.current = player.health.max; // after equipment in case of boni
-        player.mana.current = player.mana.max; // after equipment in case of boni
+        //player.mana.current = player.mana.max; // after equipment in case of boni
         player.isGameMaster = gameMaster;
 
         return player;

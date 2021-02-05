@@ -21,7 +21,6 @@ public interface ICombatBonus
 public class Combat : NetworkBehaviourNonAlloc
 {
     [Header("Components")]
-    public Level level;
     public Entity entity;
 #pragma warning disable CS0109 // member does not hide accessible member
     new public Collider collider;
@@ -29,10 +28,10 @@ public class Combat : NetworkBehaviourNonAlloc
 
     [Header("Stats")]
     [SyncVar] public bool invincible = false; // GMs, Npcs, ...
-    public LinearInt baseDamage = new LinearInt{baseValue=1};
-    public LinearInt baseDefense = new LinearInt{baseValue=1};
-    public LinearFloat baseBlockChance;
-    public LinearFloat baseCriticalChance;
+    public int baseDamage = 2;
+    public int baseDefense = 1;
+    public float baseBlockChance;
+    public float baseCriticalChance;
 
     [Header("Damage Popup")]
     public GameObject damagePopupPrefab;
@@ -58,7 +57,7 @@ public class Combat : NetworkBehaviourNonAlloc
             int bonus = 0;
             foreach (ICombatBonus bonusComponent in bonusComponents)
                 bonus += bonusComponent.GetDamageBonus();
-            return baseDamage.Get(level.current) + bonus;
+            return baseDamage + bonus;
         }
     }
 
@@ -71,7 +70,7 @@ public class Combat : NetworkBehaviourNonAlloc
             int bonus = 0;
             foreach (ICombatBonus bonusComponent in bonusComponents)
                 bonus += bonusComponent.GetDefenseBonus();
-            return baseDefense.Get(level.current) + bonus;
+            return baseDefense + bonus;
         }
     }
 
@@ -84,7 +83,7 @@ public class Combat : NetworkBehaviourNonAlloc
             float bonus = 0;
             foreach (ICombatBonus bonusComponent in bonusComponents)
                 bonus += bonusComponent.GetBlockChanceBonus();
-            return baseBlockChance.Get(level.current) + bonus;
+            return baseBlockChance + bonus;
         }
     }
 
@@ -97,7 +96,7 @@ public class Combat : NetworkBehaviourNonAlloc
             float bonus = 0;
             foreach (ICombatBonus bonusComponent in bonusComponents)
                 bonus += bonusComponent.GetCriticalChanceBonus();
-            return baseCriticalChance.Get(level.current) + bonus;
+            return baseCriticalChance + bonus;
         }
     }
 

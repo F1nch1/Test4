@@ -8,12 +8,11 @@ using Mirror;
 [Serializable] public class UnityEventSkill : UnityEvent<Skill> {}
 
 [DisallowMultipleComponent]
-public abstract class Skills : NetworkBehaviourNonAlloc, IHealthBonus, IManaBonus, ICombatBonus
+public abstract class Skills : NetworkBehaviourNonAlloc, IHealthBonus, ICombatBonus
 {
     [Header("Components")]
     public Entity entity;
     public Health health;
-    public Mana mana;
 
     // 'skillTemplates' are the available skills (first one is default attack)
     // 'skills' are the loaded skills with cooldowns etc.
@@ -88,20 +87,6 @@ public abstract class Skills : NetworkBehaviourNonAlloc, IHealthBonus, IManaBonu
         return passiveBonus + buffBonus;
     }
 
-    public int GetManaRecoveryBonus()
-    {
-        // sum up manually. Linq.Sum() is HEAVY(!) on GC and performance (190 KB/call!)
-        float passivePercent = 0;
-        foreach (Skill skill in skills)
-            if (skill.level > 0 && skill.data is PassiveSkill passiveSkill)
-                passivePercent += passiveSkill.manaPercentPerSecondBonus.Get(skill.level);
-
-        float buffPercent = 0;
-        foreach (Buff buff in buffs)
-            buffPercent += buff.manaPercentPerSecondBonus;
-
-        return Convert.ToInt32(passivePercent * mana.max) + Convert.ToInt32(buffPercent * mana.max);
-    }
 
     public int GetDamageBonus()
     {
@@ -267,7 +252,7 @@ public abstract class Skills : NetworkBehaviourNonAlloc, IHealthBonus, IManaBonu
             RpcCastFinished(skill);
 
             // decrease mana in any case
-            mana.current -= skill.manaCosts;
+            
 
             // start the cooldown (and save it in the struct)
             skill.cooldownEnd = NetworkTime.time + skill.cooldown;

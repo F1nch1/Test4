@@ -1,14 +1,12 @@
-﻿using System;
+﻿/*using System;
 using UnityEngine;
 using UnityEngine.Events;
 using Mirror;
 
-[RequireComponent(typeof(Level))]
 [DisallowMultipleComponent]
 public class Experience : NetworkBehaviourNonAlloc
 {
     [Header("Components")]
-    public Level level;
 
     [Header("Experience")] // note: int is not enough (can have > 2 mil. easily)
     [SyncVar, SerializeField] long _current = 0;
@@ -47,8 +45,8 @@ public class Experience : NetworkBehaviourNonAlloc
     }
 
     // required experience grows by 10% each level (like Runescape)
-    [SerializeField] protected ExponentialLong _max = new ExponentialLong{multiplier=100, baseValue=1.1f};
-    public long max { get { return _max.Get(level.current); } }
+    //[SerializeField] protected ExponentialLong _max = new ExponentialLong{multiplier=100, baseValue=1.1f};
+    //public long max { get { return _max.Get(level.current); } }
 
     [Header("Death")]
     public float deathLossPercent = 0.05f;
@@ -94,4 +92,4 @@ public class Experience : NetworkBehaviourNonAlloc
         // lose experience
         current -= Convert.ToInt64(max * deathLossPercent);
     }
-}
+}*/

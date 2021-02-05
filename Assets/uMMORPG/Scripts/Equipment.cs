@@ -2,7 +2,7 @@
 using Mirror;
 
 [DisallowMultipleComponent]
-public abstract class Equipment : ItemContainer, IHealthBonus, IManaBonus, ICombatBonus
+public abstract class Equipment : ItemContainer, IHealthBonus, ICombatBonus
 {
     // boni ////////////////////////////////////////////////////////////////////
     public int GetHealthBonus(int baseHealth)

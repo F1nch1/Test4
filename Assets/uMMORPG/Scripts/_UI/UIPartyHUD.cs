@@ -49,7 +49,7 @@ public partial class UIPartyHUD : MonoBehaviour
                         Player member = Player.onlinePlayers[memberName];
                         slot.icon.sprite = member.classIcon;
                         slot.healthSlider.value = member.health.Percent();
-                        slot.manaSlider.value = member.mana.Percent();
+                        //slot.manaSlider.value = member.mana.Percent();
                         slot.backgroundButton.onClick.SetListener(() => {
                             // member variable might be null by the time button gets
                             // clicked. can't target null, otherwise we get a

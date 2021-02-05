@@ -8,13 +8,11 @@ public interface IHealthBonus
     int GetHealthRecoveryBonus();
 }
 
-[RequireComponent(typeof(Level))]
 [DisallowMultipleComponent]
 public class Health : Energy
 {
-    public Level level;
 
-    public LinearInt baseHealth = new LinearInt{baseValue=100};
+    public int baseHealth = 100;
     public int baseRecoveryRate = 1;
 
     // cache components that give a bonus (attributes, inventory, etc.)
@@ -30,10 +28,10 @@ public class Health : Energy
         {
             // sum up manually. Linq.Sum() is HEAVY(!) on GC and performance (190 KB/call!)
             int bonus = 0;
-            int baseThisLevel = baseHealth.Get(level.current);
+            //int baseThisLevel = baseHealth.Get(level.current);
             foreach (IHealthBonus bonusComponent in bonusComponents)
-                bonus += bonusComponent.GetHealthBonus(baseThisLevel);
-            return baseThisLevel + bonus;
+                bonus += bonusComponent.GetHealthBonus(baseHealth);
+            return baseHealth + bonus;
         }
     }
 

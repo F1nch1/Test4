@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(fileName="New Recipe", menuName="uSurvival Recipe/Furnace", order=999)]
+[CreateAssetMenu(fileName="New Recipe", menuName="uMMORPG Recipe/Furnace", order=999)]
 public class FurnaceRecipe : ScriptableRecipe
 {
     // furnace recipes only have 1 ingredient item

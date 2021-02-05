@@ -59,7 +59,7 @@ public partial class UIParty : MonoBehaviour
                         slot.levelText.text = member.level.current.ToString();
                         slot.guildText.text = member.guild.guild.name;
                         slot.healthSlider.value = member.health.Percent();
-                        slot.manaSlider.value = member.mana.Percent();
+                        //slot.manaSlider.value = member.mana.Percent();
                     }
 
                     // action button:

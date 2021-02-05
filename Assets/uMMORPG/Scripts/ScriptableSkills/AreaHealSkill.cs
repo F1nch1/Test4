@@ -55,7 +55,7 @@ public class AreaHealSkill : HealSkill
         foreach (Entity candidate in candidates)
         {
             candidate.health.current += healsHealth.Get(skillLevel);
-            candidate.mana.current += healsMana.Get(skillLevel);
+            //candidate.mana.current += healsMana.Get(skillLevel);
 
             // show effect on candidate
             SpawnEffect(caster, candidate);

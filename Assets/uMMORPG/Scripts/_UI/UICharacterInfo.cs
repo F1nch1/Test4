@@ -47,7 +47,7 @@ public partial class UICharacterInfo : MonoBehaviour
                 damageText.text = player.combat.damage.ToString();
                 defenseText.text = player.combat.defense.ToString();
                 healthText.text = player.health.max.ToString();
-                manaText.text = player.mana.max.ToString();
+                //manaText.text = player.mana.max.ToString();
                 criticalChanceText.text = (player.combat.criticalChance * 100).ToString("F0") + "%";
                 blockChanceText.text = (player.combat.blockChance * 100).ToString("F0") + "%";
                 speedText.text = player.speed.ToString("F1");

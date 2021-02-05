@@ -18,7 +18,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
-[CreateAssetMenu(fileName="New Recipe", menuName="uMMORPG Recipe", order=999)]
+[CreateAssetMenu(fileName="New Recipe", menuName="uMMORPG Recipe/Crafting", order=999)]
 public class ScriptableRecipe : ScriptableObjectNonAlloc
 {
     // fixed ingredient size for all recipes

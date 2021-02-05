@@ -39,9 +39,7 @@ using TMPro;
 [Serializable] public class UnityEventEntityInt : UnityEvent<Entity, int> {}
 
 // note: no animator required, towers, dummies etc. may not have one
-[RequireComponent(typeof(Level))]
 [RequireComponent(typeof(Health))]
-[RequireComponent(typeof(Mana))]
 [RequireComponent(typeof(Combat))]
 //[RequireComponent(typeof(Equipment))] // not required. monsters don't have one.
 //[RequireComponent(typeof(Movement))] // not required. mounts don't have one.
@@ -54,9 +52,7 @@ using TMPro;
 public abstract partial class Entity : NetworkBehaviourNonAlloc
 {
     [Header("Components")]
-    public Level level;
     public Health health;
-    public Mana mana;
     public Combat combat;
     public Equipment equipment;
     public Movement movement;
@@ -89,8 +85,17 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
         set { _target = value != null ? value.gameObject : null; }
     }
 
+
+    [Serializable]
+    public struct LinearFloat
+    {
+        public float baseValue;
+        public float bonusPerLevel;
+        public float Get(int level) => bonusPerLevel * (level - 1) + baseValue;
+    }
+
     [Header("Speed")]
-    [SerializeField] protected LinearFloat _speed = new LinearFloat{baseValue=5};
+    public float baseSpeed = 1;
     public virtual float speed
     {
         get
@@ -106,7 +111,7 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
                 buffBonus += buff.speedBonus;
 
             // base + passives + buffs
-            return _speed.Get(level.current) + passiveBonus + buffBonus;
+            return baseSpeed + passiveBonus + buffBonus;
         }
     }
 

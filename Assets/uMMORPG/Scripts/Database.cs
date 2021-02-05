@@ -772,7 +772,7 @@ public partial class Database : MonoBehaviour
                 // assign health / mana after max values were fully loaded
                 // (they depend on equipment, buffs, etc.)
                 player.health.current = row.health;
-                player.mana.current = row.mana;
+                //player.mana.current = row.mana;
                 player.endurance.current = row.endurance;
                 player.nutrition.current = row.nutrition;
                 player.hydration.current = row.hydration;
@@ -989,7 +989,7 @@ public partial class Database : MonoBehaviour
             z = player.transform.position.z,
             level = player.level.current,
             health = player.health.current,
-            mana = player.mana.current,
+            //mana = player.mana.current,
             endurance = player.endurance.current,
             hydration = player.hydration.current,
             nutrition = player.nutrition.current,

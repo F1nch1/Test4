@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class Intelligence : PlayerAttribute, IManaBonus
+public class Intelligence : PlayerAttribute
 {
     // 1 point means 1% of max bonus
     public float manaBonusPercentPerPoint = 0.01f;

@@ -20,7 +20,7 @@ public class PotionItem : UsableItem
 
         // increase health/mana/etc.
         player.health.current += usageHealth;
-        player.mana.current += usageMana;
+        //player.mana.current += usageMana;
         player.experience.current += usageExperience;
         player.hydration.current += usageHydration;
         player.nutrition.current += usageNutrition;
