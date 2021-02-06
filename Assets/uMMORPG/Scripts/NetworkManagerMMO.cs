@@ -383,6 +383,8 @@ public partial class NetworkManagerMMO : NetworkManager
         player.health.current = player.health.max; // after equipment in case of boni
         //player.mana.current = player.mana.max; // after equipment in case of boni
         player.isGameMaster = gameMaster;
+        player.combat.invincibilityExpired = false;
+        player.combat.initialInvincibility = 30;
 
         return player;
     }

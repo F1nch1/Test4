@@ -35,10 +35,11 @@ using UnityEngine.Events;
 using Mirror;
 using TMPro;
 
-[Serializable] public class UnityEventEntity : UnityEvent<Entity> {}
-[Serializable] public class UnityEventEntityInt : UnityEvent<Entity, int> {}
+[Serializable] public class UnityEventEntity : UnityEvent<Entity> { }
+[Serializable] public class UnityEventEntityInt : UnityEvent<Entity, int> { }
 
 // note: no animator required, towers, dummies etc. may not have one
+[RequireComponent(typeof(Level))]
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(Combat))]
 //[RequireComponent(typeof(Equipment))] // not required. monsters don't have one.
@@ -52,6 +53,7 @@ using TMPro;
 public abstract partial class Entity : NetworkBehaviourNonAlloc
 {
     [Header("Components")]
+    public Level level;
     public Health health;
     public Combat combat;
     public Equipment equipment;
@@ -81,21 +83,12 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
     [SyncVar] GameObject _target;
     public Entity target
     {
-        get { return _target != null  ? _target.GetComponent<Entity>() : null; }
+        get { return _target != null ? _target.GetComponent<Entity>() : null; }
         set { _target = value != null ? value.gameObject : null; }
     }
 
-
-    [Serializable]
-    public struct LinearFloat
-    {
-        public float baseValue;
-        public float bonusPerLevel;
-        public float Get(int level) => bonusPerLevel * (level - 1) + baseValue;
-    }
-
     [Header("Speed")]
-    public float baseSpeed = 1;
+    [SerializeField] protected LinearFloat _speed = new LinearFloat { baseValue = 5 };
     public virtual float speed
     {
         get
@@ -111,7 +104,7 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
                 buffBonus += buff.speedBonus;
 
             // base + passives + buffs
-            return baseSpeed + passiveBonus + buffBonus;
+            return _speed.Get(level.current) + passiveBonus + buffBonus;
         }
     }
 
@@ -331,7 +324,7 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
         }
     }
 
-    protected virtual void OnSelect() {}
+    protected virtual void OnSelect() { }
     protected abstract void OnInteract();
 
     // ontrigger ///////////////////////////////////////////////////////////////

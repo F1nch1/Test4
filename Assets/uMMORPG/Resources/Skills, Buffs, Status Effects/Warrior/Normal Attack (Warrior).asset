@@ -20,7 +20,8 @@ MonoBehaviour:
 
     Damage: {DAMAGE}
 
-    Cast Time: {CASTTIME}
+    Cast
+    Time: {CASTTIME}
 
     Cooldown: {COOLDOWN}
 
@@ -32,7 +33,7 @@ MonoBehaviour:
   allowMovement: 1
   predecessor: {fileID: 0}
   predecessorLevel: 1
-  requiredWeaponCategory: WeaponSword
+  requiredWeaponCategory: Weapon
   requiredLevel:
     baseValue: 0
     bonusPerLevel: 0

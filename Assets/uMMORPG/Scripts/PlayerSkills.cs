@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using Mirror;
 
+[RequireComponent(typeof(Level))]
 [RequireComponent(typeof(Movement))]
 [RequireComponent(typeof(PlayerParty))]
 [DisallowMultipleComponent]
 public class PlayerSkills : Skills
 {
     [Header("Components")]
+    public Level level;
     public Movement movement;
     public PlayerParty party;
 
@@ -45,7 +47,7 @@ public class PlayerSkills : Skills
 
     // helper function: try to use a skill and walk into range if necessary
     [Client]
-    public void TryUse(int skillIndex, bool ignoreState=false)
+    public void TryUse(int skillIndex, bool ignoreState = false)
     {
         // only if not casting already
         // (might need to ignore that when coming from pending skill where
@@ -100,6 +102,7 @@ public class PlayerSkills : Skills
     public bool CanUpgrade(Skill skill)
     {
         return skill.level < skill.maxLevel &&
+               level.current >= skill.upgradeRequiredLevel &&
                skillExperience >= skill.upgradeRequiredSkillExperience &&
                (skill.predecessor == null || (HasLearnedWithLevel(skill.predecessor.name, skill.predecessorLevel)));
     }
@@ -130,13 +133,12 @@ public class PlayerSkills : Skills
     [Server]
     public void OnKilledEnemy(Entity victim)
     {
-        Debug.Log("Killed enemy");
         // killed a monster
-        /*if (victim is Monster)
+        if (victim is Monster)
         {
             // gain exp if not in a party or if in a party without exp share
             if (!party.InParty() || !party.party.shareExperience)
-                skillExperience += Experience.BalanceExpReward(((Monster)victim).rewardSkillExperience);
-        }*/
+                skillExperience += Experience.BalanceExpReward(((Monster)victim).rewardSkillExperience, level.current, victim.level.current);
+        }
     }
 }

@@ -31,7 +31,7 @@ public abstract class BuffSkill : BonusSkill
     public override string ToolTip(int skillLevel, bool showRequirements = false)
     {
         StringBuilder tip = new StringBuilder(base.ToolTip(skillLevel, showRequirements));
-        tip.Replace("{BUFFTIME}", Utils.PrettySeconds(buffTime.Get(skillLevel)));
+        //tip.Replace("{BUFFTIME}", Utils.PrettySeconds(buffTime.Get(skillLevel)));
         return tip.ToString();
     }
 }

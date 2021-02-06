@@ -37,15 +37,15 @@ public abstract partial class ScriptableSkill : ScriptableObjectNonAlloc
     public ScriptableSkill predecessor; // this skill has to be learned first
     public int predecessorLevel = 1; // level of predecessor skill that is required
     public string requiredWeaponCategory = ""; // "" = no weapon needed; "Weapon" = requires a weapon, "WeaponSword" = requires a sword weapon, etc.
-    //public LinearInt requiredLevel; // required player level
-    //public LinearLong requiredSkillExperience;
+    public LinearInt requiredLevel; // required player level
+    public LinearLong requiredSkillExperience;
 
     [Header("Properties")]
     public int maxLevel = 1;
-    //public LinearInt manaCosts;
-    //public LinearFloat castTime;
-    //public LinearFloat cooldown;
-    //public LinearFloat castRange;
+    public LinearInt manaCosts;
+    public LinearFloat castTime;
+    public LinearFloat cooldown;
+    public LinearFloat castRange;
 
     [Header("Sound")]
     public AudioClip castSound;
@@ -114,7 +114,7 @@ public abstract partial class ScriptableSkill : ScriptableObjectNonAlloc
     }
 
     // [Client]
-    public virtual void OnCastFinished(Entity caster) {}
+    public virtual void OnCastFinished(Entity caster) { }
 
     // OnCastCanceled doesn't seem worth the Rpc bandwidth, since skill effects
     // can check if caster.currentSkill == -1
@@ -142,16 +142,16 @@ public abstract partial class ScriptableSkill : ScriptableObjectNonAlloc
         StringBuilder tip = new StringBuilder(toolTip);
         tip.Replace("{NAME}", name);
         tip.Replace("{LEVEL}", level.ToString());
-        //tip.Replace("{CASTTIME}", Utils.PrettySeconds(castTime.Get(level)));
-        //tip.Replace("{COOLDOWN}", Utils.PrettySeconds(cooldown.Get(level)));
-        //tip.Replace("{CASTRANGE}", castRange.Get(level).ToString());
-        //tip.Replace("{MANACOSTS}", manaCosts.Get(level).ToString());
+        tip.Replace("{CASTTIME}", Utils.PrettySeconds(castTime.Get(level)));
+        tip.Replace("{COOLDOWN}", Utils.PrettySeconds(cooldown.Get(level)));
+        tip.Replace("{CASTRANGE}", castRange.Get(level).ToString());
+        tip.Replace("{MANACOSTS}", manaCosts.Get(level).ToString());
 
         // only show requirements if necessary
         if (showRequirements)
         {
-            //tip.Append("\n<b><i>Required Level: " + requiredLevel.Get(1) + "</i></b>\n" +
-                       //"<b><i>Required Skill Exp.: " + requiredSkillExperience.Get(1) + "</i></b>\n");
+            tip.Append("\n<b><i>Required Level: " + requiredLevel.Get(1) + "</i></b>\n" +
+                       "<b><i>Required Skill Exp.: " + requiredSkillExperience.Get(1) + "</i></b>\n");
             if (predecessor != null)
                 tip.Append("<b><i>Required Skill: " + predecessor.name + " Lv. " + predecessorLevel + " </i></b>\n");
         }

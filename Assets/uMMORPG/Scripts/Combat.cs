@@ -15,7 +15,7 @@ public interface ICombatBonus
     float GetBlockChanceBonus();
 }
 
-[Serializable] public class UnityEventIntDamageType : UnityEvent<int, DamageType> {}
+[Serializable] public class UnityEventIntDamageType : UnityEvent<int, DamageType> { }
 
 [DisallowMultipleComponent]
 public class Combat : NetworkBehaviourNonAlloc
@@ -43,10 +43,34 @@ public class Combat : NetworkBehaviourNonAlloc
     public UnityEventEntityInt onServerReceivedDamage;
     public UnityEventIntDamageType onClientReceivedDamage;
 
+    [Header("Spawn Invincibility")]
+    public float initialInvincibility;
+    public bool invincibilityExpired;
+
     // cache components that give a bonus (attributes, inventory, etc.)
     ICombatBonus[] _bonusComponents;
     ICombatBonus[] bonusComponents =>
         _bonusComponents ?? (_bonusComponents = GetComponents<ICombatBonus>());
+
+    private void Update()
+    {
+        Player player = Player.localPlayer;
+        if (initialInvincibility > 0 && entity.CompareTag("Player") && !invincibilityExpired) 
+        {
+            initialInvincibility -= Time.deltaTime;
+            invincible = true;
+            invincibilityExpired = false;
+        }
+        else if(entity.CompareTag("Player") && initialInvincibility > 0)
+        {
+            invincible = false;
+            invincibilityExpired = true;
+        }
+        else
+        {
+            invincible = false;
+        }
+    }
 
     // calculate damage
     public int damage
@@ -104,7 +128,7 @@ public class Combat : NetworkBehaviourNonAlloc
     // deal damage at another entity
     // (can be overwritten for players etc. that need custom functionality)
     [Server]
-    public virtual void DealDamageAt(Entity victim, int amount, float stunChance=0, float stunTime=0)
+    public virtual void DealDamageAt(Entity victim, int amount, float stunChance = 0, float stunTime = 0)
     {
         Combat victimCombat = victim.combat;
         int damageDealt = 0;

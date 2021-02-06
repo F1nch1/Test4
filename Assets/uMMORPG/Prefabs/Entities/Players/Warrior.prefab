@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 5477952}
   - component: {fileID: 82252748755917382}
   - component: {fileID: 1164160052969292912}
-  - component: {fileID: 1342882938644206925}
+  - component: {fileID: -1960320716069003579}
   - component: {fileID: 2823564572603043832}
-  - component: {fileID: 1397971981476180811}
   - component: {fileID: 1823876935877992634}
   - component: {fileID: 2096369668014323925}
   - component: {fileID: 2873959934133953937}
@@ -275,7 +274,7 @@ MonoBehaviour:
   slideGravityMultiplier: 4
   slideStartDelay: 0.1
   slideStopDelay: 0.1
---- !u!114 &1342882938644206925
+--- !u!114 &-1960320716069003579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,13 +283,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 110258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7fb003075d154e199566b65ef58a743, type: 3}
+  m_Script: {fileID: 11500000, guid: 274cc6187d1639143b03761763a43aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
-  syncInterval: 1
+  syncInterval: 0.1
   current: 1
-  max: 4
+  max: 1
 --- !u!114 &2823564572603043832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +312,7 @@ MonoBehaviour:
   onEmpty:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1397971981476180811}
+      - m_Target: {fileID: 0}
         m_MethodName: set_current
         m_Mode: 3
         m_Arguments:
@@ -357,37 +356,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  level: {fileID: 1342882938644206925}
-  baseHealth:
-    baseValue: 100
-    bonusPerLevel: 10
-  baseRecoveryRate: 1
---- !u!114 &1397971981476180811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7543fd04b78284e9ea6f0906d905a21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  health: {fileID: 2823564572603043832}
-  spawnFull: 0
-  overflowInto: {fileID: 0}
-  underflowInto: {fileID: 0}
-  recoveryTickRate: 1
-  onEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-  level: {fileID: 1342882938644206925}
-  baseMana:
-    baseValue: 100
-    bonusPerLevel: 10
+  baseHealth: 100
   baseRecoveryRate: 1
 --- !u!114 &1823876935877992634
 MonoBehaviour:
@@ -403,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 1342882938644206925}
+  level: {fileID: 0}
   health: {fileID: 2823564572603043832}
   value: 0
   healthBonusPercentPerPoint: 0.01
@@ -421,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 1342882938644206925}
+  level: {fileID: 0}
   health: {fileID: 2823564572603043832}
   value: 0
   manaBonusPercentPerPoint: 0.01
@@ -439,22 +408,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 1342882938644206925}
   entity: {fileID: 11460454}
   collider: {fileID: 522478269176853804}
   invincible: 0
-  baseDamage:
-    baseValue: 1
-    bonusPerLevel: 0
-  baseDefense:
-    baseValue: 1
-    bonusPerLevel: 0
-  baseBlockChance:
-    baseValue: 0
-    bonusPerLevel: 0
-  baseCriticalChance:
-    baseValue: 0
-    bonusPerLevel: 0
+  baseDamage: 2
+  baseDefense: 1
+  baseBlockChance: 0
+  baseCriticalChance: 0
   damagePopupPrefab: {fileID: 179236, guid: e81ebbaa55e254e31b9909cef04e3855, type: 3}
   onDamageDealtTo:
     m_PersistentCalls:
@@ -578,6 +538,7 @@ MonoBehaviour:
   onClientReceivedDamage:
     m_PersistentCalls:
       m_Calls: []
+  initialInvincibility: 30
 --- !u!114 &11460454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,9 +553,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 1342882938644206925}
+  level: {fileID: -1960320716069003579}
   health: {fileID: 2823564572603043832}
-  mana: {fileID: 1397971981476180811}
   combat: {fileID: 2873959934133953937}
   equipment: {fileID: 2064411027338341670}
   movement: {fileID: 6199162863093139771}
@@ -934,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 1
   syncInterval: 0.1
-  level: {fileID: 1342882938644206925}
+  level: {fileID: -1960320716069003579}
   _current: 0
   _max:
     multiplier: 100
@@ -1241,7 +1201,6 @@ MonoBehaviour:
   syncInterval: 0.1
   entity: {fileID: 11460454}
   health: {fileID: 2823564572603043832}
-  mana: {fileID: 1397971981476180811}
   skillTemplates:
   - {fileID: 11400000, guid: 605fccd420d8e495891132829d3ac497, type: 2}
   - {fileID: 11400000, guid: 88f51d092fdf64bb0bf352cae8c522a0, type: 2}
@@ -1267,7 +1226,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   currentSkill: -1
-  level: {fileID: 1342882938644206925}
+  level: {fileID: -1960320716069003579}
   movement: {fileID: 6199162863093139771}
   party: {fileID: 6658861335716545269}
   skillExperience: 0
@@ -1475,7 +1434,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   zoomSpeed: 0.5
-  distance: 3
+  distance: 0
   minDistance: 0
   maxDistance: 7
   raycastLayers:

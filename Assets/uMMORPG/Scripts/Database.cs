@@ -109,6 +109,7 @@ public partial class Database : MonoBehaviour
         public long gold { get; set; } // TODO does long work?
         public long coins { get; set; } // TODO does long work?
         public bool gamemaster { get; set; }
+        public bool spawnInvincibility { get; set; }
         // online status can be checked from external programs with either just
         // just 'online', or 'online && (DateTime.UtcNow - lastsaved) <= 1min)
         // which is robust to server crashes too.
@@ -736,6 +737,7 @@ public partial class Database : MonoBehaviour
                 ((PlayerSkills)player.skills).skillExperience = row.skillExperience;
                 player.gold                                   = row.gold;
                 player.isGameMaster                           = row.gamemaster;
+                player.combat.invincibilityExpired            = row.spawnInvincibility;
                 player.itemMall.coins                         = row.coins;
 
                 // can the player's movement type spawn on the saved position?
@@ -1000,6 +1002,7 @@ public partial class Database : MonoBehaviour
             gold = player.gold,
             coins = player.itemMall.coins,
             gamemaster = player.isGameMaster,
+            spawnInvincibility = player.combat.invincibilityExpired,
             online = online,
             lastsaved = DateTime.UtcNow
         });
