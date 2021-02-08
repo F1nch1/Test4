@@ -17,6 +17,10 @@ public class PlayerInventory : Inventory
     [Header("Trash")]
     [SyncVar] public ItemSlot trash;
 
+    [Header("Item Drops")]
+    public float dropRadius = 1;
+    public int dropSolverAttempts = 3; // attempts to drop without being behind a wall, etc.
+
     // are inventory operations like swap, merge, split allowed at the moment?
     // -> trading offers are inventory indices. we don't allow any inventory
     //    operations while trading to guarantee the trade offer indices don't
@@ -48,6 +52,8 @@ public class PlayerInventory : Inventory
             }
         }
     }
+
+
 
     [Command]
     public void CmdSwapTrashInventory(int inventoryIndex)
@@ -174,6 +180,44 @@ public class PlayerInventory : Inventory
         }
     }
 
+    [Server]
+    public void DropItem(Item item, int amount)
+    {
+        // drop at random point on navmesh that is NOT behind a wall
+        // -> dropping behind a wall is just bad gameplay
+        // -> on navmesh because that's the easiest way to find the ground
+        //    without accidentally raycasting ourselves or something else
+        Vector3 position = Utils.ReachableRandomUnitCircleOnNavMesh(transform.position, dropRadius, dropSolverAttempts);
+
+        // drop
+        GameObject go = Instantiate(item.data.drop.gameObject, position, Quaternion.identity);
+        ItemDrop drop = go.GetComponent<ItemDrop>();
+        drop.item = item;
+        drop.amount = amount;
+        NetworkServer.Spawn(go);
+    }
+
+    [Server]
+    public void DropItemAndClearSlot(int index)
+    {
+        // drop and remove from inventory
+        ItemSlot slot = slots[index];
+        DropItem(slot.item, slot.amount);
+        slot.amount = 0;
+        slots[index] = slot;
+    }
+
+    [Command]
+    public void CmdDropItem(int index)
+    {
+        // validate
+        if (player.health.current > 0 &&
+            0 <= index && index < slots.Count && slots[index].amount > 0)
+        {
+            DropItemAndClearSlot(index);
+        }
+    }
+
     // drag & drop /////////////////////////////////////////////////////////////
     void OnDragAndDrop_InventorySlot_InventorySlot(int[] slotIndices)
     {
@@ -197,6 +241,10 @@ public class PlayerInventory : Inventory
         }
     }
 
+    void OnDragAndClear_InventorySlot(int slotIndex)
+    {
+        CmdDropItem(slotIndex);
+    }
     void OnDragAndDrop_InventorySlot_TrashSlot(int[] slotIndices)
     {
         // slotIndices[0] = slotFrom; slotIndices[1] = slotTo

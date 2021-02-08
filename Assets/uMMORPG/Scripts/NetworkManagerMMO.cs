@@ -38,6 +38,7 @@ public partial class NetworkManagerMMO : NetworkManager
     // UI components to avoid FindObjectOfType
     [Header("UI")]
     public UIPopup uiPopup;
+    public UICharacterSelection selector;
 
     // we may want to add another game server if the first one gets too crowded.
     // the server list allows people to choose a server.
@@ -70,6 +71,11 @@ public partial class NetworkManagerMMO : NetworkManager
     public int characterLimit = 4;
     public int characterNameMaxLength = 16;
     public float saveInterval = 60f; // in seconds
+
+    [Header("Character Creation")]
+    public Transform creationCameraLocation;
+    public GameObject basePrefab;
+    public Transform creationLocation;
 
     // we still need OnStartClient/Server/etc. events for NetworkManager because
     // those are not regular NetworkBehaviour events that all components get.
@@ -384,7 +390,7 @@ public partial class NetworkManagerMMO : NetworkManager
         //player.mana.current = player.mana.max; // after equipment in case of boni
         player.isGameMaster = gameMaster;
         player.combat.invincibilityExpired = false;
-        player.combat.initialInvincibility = 30;
+        player.combat.initialInvincibility = 500;
 
         return player;
     }
@@ -658,5 +664,12 @@ public partial class NetworkManagerMMO : NetworkManager
             // use new array
             selectionLocations = newArray;
         }
+    }
+
+    public void BeginCharacterCreation()
+    {
+        selector.panel.SetActive(false);
+        Camera.main.transform.position = creationCameraLocation.position;
+        Camera.main.transform.rotation = creationCameraLocation.rotation;
     }
 }

@@ -37,6 +37,7 @@ public partial class ScriptableItem : ScriptableObjectNonAlloc
     public bool destroyable;
     [SerializeField, TextArea(1, 30)] protected string toolTip; // not public, use ToolTip()
     public Sprite image;
+    public ItemDrop drop;
 
     // tooltip /////////////////////////////////////////////////////////////////
     // fill in all variables into the tooltip

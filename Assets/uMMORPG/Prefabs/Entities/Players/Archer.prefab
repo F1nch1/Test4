@@ -16,9 +16,7 @@ GameObject:
   - component: {fileID: 82304612815829720}
   - component: {fileID: 165155920048167185}
   - component: {fileID: 11448894}
-  - component: {fileID: 6372609056192116201}
   - component: {fileID: 5712206906443104382}
-  - component: {fileID: 8529401566019713110}
   - component: {fileID: 6395401577655504590}
   - component: {fileID: 5337225809773296567}
   - component: {fileID: 4516250602342586415}
@@ -46,6 +44,16 @@ GameObject:
   - component: {fileID: 7078722035870961944}
   - component: {fileID: 11440176}
   - component: {fileID: 11487752}
+  - component: {fileID: 2426397423608983621}
+  - component: {fileID: 6985032549936226511}
+  - component: {fileID: 5210104819907261230}
+  - component: {fileID: 2881750738439335471}
+  - component: {fileID: 9189295677161760102}
+  - component: {fileID: 7648209447782414981}
+  - component: {fileID: 5649949157170840364}
+  - component: {fileID: 1573646280117512601}
+  - component: {fileID: 4850808276997850568}
+  - component: {fileID: 9167703580883144586}
   m_Layer: 8
   m_Name: Archer
   m_TagString: Player
@@ -102,7 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneId: 0
   serverOnly: 0
-  m_AssetId: eb4d93658e2654e8c9448f27a17f0f9e
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!136 &1151286255528639776
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -277,9 +286,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 6372609056192116201}
+  level: {fileID: 2426397423608983621}
   health: {fileID: 5712206906443104382}
-  mana: {fileID: 8529401566019713110}
   combat: {fileID: 4516250602342586415}
   equipment: {fileID: 1878228289942901919}
   movement: {fileID: 3016753915855997007}
@@ -299,17 +307,12 @@ MonoBehaviour:
   onAggro:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEventEntity, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onSelect:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   onInteract:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   stunTimeEnd: 0
   inSafeZone: 0
   experience: {fileID: 7224164981670902446}
@@ -333,6 +336,15 @@ MonoBehaviour:
   skillbar: {fileID: 4964662516097220050}
   trading: {fileID: 7078722035870961944}
   avatarCamera: {fileID: 20662726061508384}
+  traits: {fileID: 6985032549936226511}
+  bookskills: {fileID: 5210104819907261230}
+  study: {fileID: 9167703580883144586}
+  endurance: {fileID: 2881750738439335471}
+  look: {fileID: 9189295677161760102}
+  interaction: {fileID: 5649949157170840364}
+  nutrition: {fileID: 1573646280117512601}
+  hydration: {fileID: 4850808276997850568}
+  model: {fileID: 1337643834185399715}
   nameOverlay: {fileID: 7366955452696793662}
   nameOverlayDefaultColor: {r: 1, g: 1, b: 1, a: 1}
   nameOverlayOffenderColor: {r: 1, g: 0, b: 1, a: 1}
@@ -355,22 +367,6 @@ MonoBehaviour:
   pendingSkill: -1
   pendingDestination: {x: 0, y: 0, z: 0}
   pendingDestinationValid: 0
---- !u!114 &6372609056192116201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7fb003075d154e199566b65ef58a743, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 1
-  current: 1
-  max: 4
 --- !u!114 &5712206906443104382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,10 +383,13 @@ MonoBehaviour:
   syncInterval: 0.1
   health: {fileID: 5712206906443104382}
   spawnFull: 0
+  overflowInto: {fileID: 0}
+  underflowInto: {fileID: 0}
+  recoveryTickRate: 1
   onEmpty:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8529401566019713110}
+      - m_Target: {fileID: 0}
         m_MethodName: set_current
         m_Mode: 3
         m_Arguments:
@@ -434,38 +433,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  level: {fileID: 6372609056192116201}
-  baseHealth:
-    baseValue: 100
-    bonusPerLevel: 10
-  baseRecoveryRate: 1
---- !u!114 &8529401566019713110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 142034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7543fd04b78284e9ea6f0906d905a21b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  health: {fileID: 5712206906443104382}
-  spawnFull: 0
-  onEmpty:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  level: {fileID: 6372609056192116201}
-  baseMana:
-    baseValue: 100
-    bonusPerLevel: 10
+  baseHealth: 100
   baseRecoveryRate: 1
 --- !u!114 &6395401577655504590
 MonoBehaviour:
@@ -481,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 6372609056192116201}
+  level: {fileID: 0}
   health: {fileID: 5712206906443104382}
   value: 0
   healthBonusPercentPerPoint: 0.01
@@ -499,7 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 6372609056192116201}
+  level: {fileID: 0}
   health: {fileID: 5712206906443104382}
   value: 0
   manaBonusPercentPerPoint: 0.01
@@ -517,22 +485,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 6372609056192116201}
   entity: {fileID: 11448894}
   collider: {fileID: 5311137214504998865}
   invincible: 0
-  baseDamage:
-    baseValue: 1
-    bonusPerLevel: 0
-  baseDefense:
-    baseValue: 1
-    bonusPerLevel: 0
-  baseBlockChance:
-    baseValue: 0
-    bonusPerLevel: 0
-  baseCriticalChance:
-    baseValue: 0
-    bonusPerLevel: 0
+  baseDamage: 2
+  baseDefense: 1
+  baseBlockChance: 0
+  baseCriticalChance: 0
   damagePopupPrefab: {fileID: 179236, guid: e81ebbaa55e254e31b9909cef04e3855, type: 3}
   onDamageDealtTo:
     m_PersistentCalls:
@@ -570,7 +529,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEventEntity, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onKilledEnemy:
     m_PersistentCalls:
       m_Calls:
@@ -640,7 +598,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEventEntity, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onServerReceivedDamage:
     m_PersistentCalls:
       m_Calls:
@@ -655,12 +612,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEventEntityInt, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onClientReceivedDamage:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEventIntDamageType, uMMORPG, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
+  initialInvincibility: 0
+  invincibilityExpired: 0
 --- !u!114 &11481206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,7 +662,6 @@ MonoBehaviour:
   onSubmit:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEventString, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &3016753915855997007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,37 +687,38 @@ MonoBehaviour:
   state: 0
   moveDir: {x: 0, y: 0, z: 0}
   rotationSpeed: 190
-  runAcceleration: 15
-  runDeceleration: 20
   runStepLength: 0.7
   runStepInterval: 3
   runCycleLegOffset: 0.2
   runWhileBothMouseButtonsPressed: 1
   swimSpeed: 4
-  swimAcceleration: 15
-  swimDeceleration: 20
   swimSurfaceOffset: 0.25
-  underwaterThreshold: 0.7
   canStandInWaterCheckLayers:
     serializedVersion: 2
     m_Bits: 1
+  underwaterThreshold: 0.7
   jumpSpeed: 7
   jumpLeg: 0
-  airborneAcceleration: 15
-  airborneDeceleration: 20
   airborneSteering: 1
   fallMinimumMagnitude: 6
   fallDamageMinimumMagnitude: 13
   fallDamageMultiplier: 2
   lastFall: {x: 0, y: 0, z: 0}
+  firstPersonOffsetCrouching: {x: 0, y: 0}
+  thirdPersonOffsetCrouching: {x: 0, y: 0.5}
+  thirdPersonOffsetCrouchingMultiplier: {x: 0, y: 0}
+  crouchOriginMultiplier: 0.65
+  firstPersonOffsetCrawling: {x: 0, y: 0}
+  thirdPersonOffsetCrawling: {x: 0, y: 1}
+  thirdPersonOffsetCrawlingMultiplier: {x: 0, y: 0}
+  crawlOriginMultiplier: 0.65
   mountedRotationSpeed: 100
-  mountedAcceleration: 15
-  mountedDeceleration: 20
   gravityMultiplier: 2
   minMoveBuffer: 2
   combineMovesAfter: 5
   maxMoveBuffer: 10
   rubberDistance: 1
+  validSpeedTolerance: 0.2
   footstepSounds: []
   jumpSound: {fileID: 0}
   landSound: {fileID: 0}
@@ -862,6 +818,8 @@ MonoBehaviour:
   player: {fileID: 11448894}
   animator: {fileID: 9529560}
   inventory: {fileID: 5862149248774273826}
+  dropRadius: 1
+  dropSolverAttempts: 3
   slotInfo:
   - requiredCategory: WeaponBow
     location: {fileID: 6202494224413683237}
@@ -917,7 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 1
   syncInterval: 0.1
-  level: {fileID: 6372609056192116201}
+  level: {fileID: 0}
   _current: 0
   _max:
     multiplier: 100
@@ -926,8 +884,6 @@ MonoBehaviour:
   onLevelUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   chat: {fileID: 11481206}
   party: {fileID: 1571798236742742759}
 --- !u!114 &1551624724093034080
@@ -1017,12 +973,15 @@ MonoBehaviour:
   trash:
     item:
       hash: 0
+      ammo: 0
       durability: 0
       summoned: {fileID: 0}
       summonedHealth: 0
       summonedLevel: 0
       summonedExperience: 0
     amount: 0
+  dropRadius: 1
+  dropSolverAttempts: 3
 --- !u!114 &4016757157961452272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1227,7 +1186,6 @@ MonoBehaviour:
   syncInterval: 0.1
   entity: {fileID: 11448894}
   health: {fileID: 5712206906443104382}
-  mana: {fileID: 8529401566019713110}
   skillTemplates:
   - {fileID: 11400000, guid: 54f1b3885da2e44b991163483e674f92, type: 2}
   - {fileID: 11400000, guid: d8e7eaf27794b4382977cb2cef976a83, type: 2}
@@ -1239,7 +1197,6 @@ MonoBehaviour:
   onSkillCastStarted:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEventSkill, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   onSkillCastFinished:
     m_PersistentCalls:
       m_Calls:
@@ -1254,9 +1211,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_TypeName: UnityEventSkill, uMMORPG, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   currentSkill: -1
-  level: {fileID: 6372609056192116201}
+  level: {fileID: 0}
   movement: {fileID: 3016753915855997007}
   party: {fileID: 1571798236742742759}
   skillExperience: 0
@@ -1327,6 +1283,277 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+--- !u!114 &2426397423608983621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274cc6187d1639143b03761763a43aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  current: 1
+  max: 1
+--- !u!114 &6985032549936226511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607950a86aa4761438c90c5cdb6cfdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  agility: 0
+  awareness: 0
+  charisma: 0
+  intelligence: 0
+  resilience: 0
+--- !u!114 &5210104819907261230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df1c46ac896f2445b37909ce51111ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  academia: 0
+  agriculture: 0
+  animal_handling: 0
+  athletics: 0
+  cooking: 0
+  crafting: 0
+  firearms: 0
+  leadership: 0
+  mechanics: 0
+  melee_combat: 0
+  ranged_combat: 0
+  survival: 0
+  tailoring: 0
+  unarmed_combat: 0
+  vehicles: 0
+--- !u!114 &2881750738439335471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b3bb04171031b84f9025a3ed8b9190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 5712206906443104382}
+  spawnFull: 1
+  overflowInto: {fileID: 0}
+  underflowInto: {fileID: 0}
+  recoveryTickRate: 1
+  onEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  movement: {fileID: 3016753915855997007}
+  _recoveryPerTick: 1
+  baseEndurance: 10
+  drainStates:
+  - state: 1
+    drain: -1
+  - state: 2
+    drain: -1
+--- !u!114 &9189295677161760102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29803206476bcc4c868edfa87f2b07c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  ik: {fileID: 7648209447782414981}
+  movement: {fileID: 3016753915855997007}
+  health: {fileID: 5712206906443104382}
+  XSensitivity: 2
+  YSensitivity: 2
+  MinimumX: -90
+  MaximumX: 90
+  firstPersonParent: {fileID: 1322940900655178523}
+  freeLookParent: {fileID: 1322940900655178523}
+  freeLookKey: 308
+  viewBlockingLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  zoomSpeed: 0.5
+  distance: 0
+  minDistance: 0
+  maxDistance: 7
+  raycastLayers:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  firstPersonOffsetStanding: {x: 0, y: 0}
+  thirdPersonOffsetStanding: {x: 0, y: 1}
+  thirdPersonOffsetStandingMultiplier: {x: 0, y: 0}
+  firstPersonOffsetCrouching: {x: 0, y: 0}
+  thirdPersonOffsetCrouching: {x: 0, y: 0.5}
+  thirdPersonOffsetCrouchingMultiplier: {x: 0, y: 0}
+  crouchOriginMultiplier: 0.65
+  firstPersonOffsetCrawling: {x: 0, y: 0}
+  thirdPersonOffsetCrawling: {x: 0, y: 1}
+  thirdPersonOffsetCrawlingMultiplier: {x: 0, y: 0}
+  crawlOriginMultiplier: 0.65
+  firstPersonOffsetSwimming: {x: 0, y: 0}
+  thirdPersonOffsetSwimming: {x: 0, y: 1}
+  thirdPersonOffsetSwimmingMultiplier: {x: 0, y: 0}
+  swimOriginMultiplier: 0.65
+  syncedLookDirectionFarXrot: 0
+  syncedLookDirectionFarYrot: 0
+--- !u!114 &7648209447782414981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af20e735052a2564aaec9c2c608e2c35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 9529560}
+  look: {fileID: 9189295677161760102}
+  rightHandTarget: {fileID: 0}
+  rightHandWeight: 1
+  rightElbowTarget: {fileID: 0}
+  rightElbowWeight: 1
+  leftHandTarget: {fileID: 0}
+  leftHandWeight: 1
+  leftElbowTarget: {fileID: 0}
+  leftElbowWeight: 1
+  lookAtCameraDirection: 1
+  lookAtWeight: 1
+  lookAtBodyWeight: 1
+  lookAtBodyWeightActive: 1
+  lookAtHeadWeight: 1
+  lookAtHeadWeightActive: 1
+  lookAtEyesWeight: 0
+  lookAtEyesWeightActive: 1
+  lookAtClampWeight: 0.3
+  lookAtClampWeightActive: 1
+--- !u!114 &5649949157170840364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdf1550068313a4d9544bfeebe96359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  player: {fileID: 11448894}
+  range: 3
+  key: 102
+--- !u!114 &1573646280117512601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516e0a0a4ea4ef94982bfa3cb2fa2bae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 5712206906443104382}
+  spawnFull: 1
+  overflowInto: {fileID: 0}
+  underflowInto: {fileID: 0}
+  recoveryTickRate: 1
+  onEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  baseRecoveryPerTick: -1
+  baseNutrition: 100
+--- !u!114 &4850808276997850568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5727bf9eb0b7784f979d5d42b2447d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: {fileID: 5712206906443104382}
+  spawnFull: 1
+  overflowInto: {fileID: 0}
+  underflowInto: {fileID: 0}
+  recoveryTickRate: 1
+  onEmpty:
+    m_PersistentCalls:
+      m_Calls: []
+  baseRecoveryPerTick: -1
+  baseHydration: 100
+--- !u!114 &9167703580883144586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 142034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b67947039643e47a4b757d22677400, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  player: {fileID: 11448894}
+  trading: {fileID: 7078722035870961944}
+  size: 30
+  defaultItems: []
+  splitKeys: 300100002f010000
+  trash:
+    item:
+      hash: 0
+      ammo: 0
+      durability: 0
+      summoned: {fileID: 0}
+      summonedHealth: 0
+      summonedLevel: 0
+      summonedExperience: 0
+    amount: 0
 --- !u!1 &168058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1596,6 @@ GameObject:
   - component: {fileID: 6057353897538112177}
   - component: {fileID: 11412242}
   - component: {fileID: 8349513865080760719}
-  - component: {fileID: 3695225588860326658}
   - component: {fileID: 4924448240882492545}
   - component: {fileID: 7134276158811699519}
   m_Layer: 14
@@ -1424,6 +1650,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1435,6 +1662,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1447,14 +1675,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &3695225588860326658
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 184450}
-  m_Mesh: {fileID: 0}
 --- !u!222 &4924448240882492545
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1478,11 +1698,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1504,13 +1723,12 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
   m_fontSize: 3
   m_fontSizeBase: 3
   m_fontWeight: 400
@@ -1518,8 +1736,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 514
-  m_isAlignmentEnumConverted: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1529,10 +1748,8 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
+  parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
@@ -1540,44 +1757,22 @@ MonoBehaviour:
   m_parseCtrlCharacters: 1
   m_isOrthographic: 0
   m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 7134276158811699519}
-    characterCount: 0
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
-    linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
-  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8349513865080760719}
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_maskType: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &1170174267333670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,7 +1784,6 @@ GameObject:
   - component: {fileID: 6136766207110932110}
   - component: {fileID: 114898073836351098}
   - component: {fileID: 1744781088618168192}
-  - component: {fileID: 7037735892284589740}
   - component: {fileID: 545429591566738847}
   - component: {fileID: 7366955452696793662}
   m_Layer: 14
@@ -1644,6 +1838,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1655,6 +1850,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -1667,14 +1863,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &7037735892284589740
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1170174267333670}
-  m_Mesh: {fileID: 0}
 --- !u!222 &545429591566738847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1698,11 +1886,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1724,13 +1911,12 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
   m_fontSize: 3
   m_fontSizeBase: 3
   m_fontWeight: 400
@@ -1738,8 +1924,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_textAlignment: 514
-  m_isAlignmentEnumConverted: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -1749,10 +1936,8 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
+  parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
@@ -1760,44 +1945,22 @@ MonoBehaviour:
   m_parseCtrlCharacters: 1
   m_isOrthographic: 0
   m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 7366955452696793662}
-    characterCount: 0
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
-    linkCount: 0
-    lineCount: 0
-    pageCount: 0
-    materialCount: 1
-  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1744781088618168192}
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_maskType: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &1181666739195520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,9 +2104,10 @@ Camera:
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -2183,6 +2347,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2195,6 +2360,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -2360,6 +2526,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2376,6 +2543,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3301,6 +3469,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3312,6 +3481,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -3355,11 +3525,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Stunned!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3381,13 +3550,12 @@ MonoBehaviour:
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 0
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_outlineColor:
-    serializedVersion: 2
-    rgba: 4278190080
   m_fontSize: 3
   m_fontSizeBase: 3
   m_fontWeight: 400
@@ -3395,8 +3563,9 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 3
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 514
-  m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -3406,10 +3575,8 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
-  m_isLinkedTextComponent: 0
-  m_isTextTruncated: 0
+  parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
@@ -3417,44 +3584,22 @@ MonoBehaviour:
   m_parseCtrlCharacters: 1
   m_isOrthographic: 0
   m_isCullingEnabled: 0
-  m_ignoreRectMaskCulling: 0
-  m_ignoreCulling: 1
   m_horizontalMapping: 0
   m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
-  m_firstVisibleCharacter: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
   m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_textInfo:
-    textComponent: {fileID: 2439708624845488329}
-    characterCount: 8
-    spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
-    linkCount: 0
-    lineCount: 1
-    pageCount: 1
-    materialCount: 1
-  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
-  m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6447961175063277103}
-  m_subTextObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_maskType: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &3432992039789858271
 GameObject:
   m_ObjectHideFlags: 0
@@ -4769,6 +4914,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4780,6 +4926,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5129,6 +5276,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5140,6 +5288,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5399,6 +5548,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5410,6 +5560,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5694,6 +5845,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5706,6 +5858,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -5776,6 +5929,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5790,6 +5944,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -6220,6 +6375,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6231,6 +6387,7 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0

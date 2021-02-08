@@ -64,6 +64,7 @@ public class UIDragAndDropable : MonoBehaviour , IBeginDragHandler, IDragHandler
                 Player.localPlayer.SendMessage("OnDragAndClear_" + tag,
                                                name.ToInt(),
                                                SendMessageOptions.DontRequireReceiver);
+                Debug.Log("OnDragAndClear_" + tag);
             }
 
             // reset flag
@@ -100,6 +101,7 @@ public class UIDragAndDropable : MonoBehaviour , IBeginDragHandler, IDragHandler
                     Player.localPlayer.SendMessage("OnDragAndDrop_" + dropDragable.tag + "_" + tag,
                                                    new int[]{from, to},
                                                    SendMessageOptions.DontRequireReceiver);
+                    Debug.Log(("OnDragAndDrop_" + dropDragable.tag + "_" + tag));
                 }
             }
         }

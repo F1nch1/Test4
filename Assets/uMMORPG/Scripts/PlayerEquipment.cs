@@ -20,6 +20,10 @@ public class PlayerEquipment : Equipment
     public Animator animator;
     public PlayerInventory inventory;
 
+    [Header("Item Drops")]
+    public float dropRadius = 1;
+    public int dropSolverAttempts = 3; // attempts to drop without being behind a wall, etc.
+
     [Header("Equipment Info")]
     public EquipmentInfo[] slotInfo = {
         new EquipmentInfo{requiredCategory="Weapon", location=null, defaultItem=new ScriptableItemAndAmount()},
@@ -274,6 +278,45 @@ public class PlayerEquipment : Equipment
         }
     }
 
+
+    [Server]
+    public void DropItem(Item item, int amount)
+    {
+        // drop at random point on navmesh that is NOT behind a wall
+        // -> dropping behind a wall is just bad gameplay
+        // -> on navmesh because that's the easiest way to find the ground
+        //    without accidentally raycasting ourselves or something else
+        Vector3 position = Utils.ReachableRandomUnitCircleOnNavMesh(transform.position, dropRadius, dropSolverAttempts);
+
+        // drop
+        GameObject go = Instantiate(item.data.drop.gameObject, position, Quaternion.identity);
+        ItemDrop drop = go.GetComponent<ItemDrop>();
+        drop.item = item;
+        drop.amount = amount;
+        NetworkServer.Spawn(go);
+    }
+
+    [Server]
+    public void DropItemAndClearSlot(int index)
+    {
+        // drop and remove from inventory
+        ItemSlot slot = slots[index];
+        DropItem(slot.item, slot.amount);
+        slot.amount = 0;
+        slots[index] = slot;
+    }
+
+    [Command]
+    public void CmdDropItem(int index)
+    {
+        // validate
+        if (player.health.current > 0 &&
+            0 <= index && index < slots.Count && slots[index].amount > 0)
+        {
+            DropItemAndClearSlot(index);
+        }
+    }
+
     // durability //////////////////////////////////////////////////////////////
     public void OnDamageDealtTo(Entity victim)
     {
@@ -336,6 +379,11 @@ public class PlayerEquipment : Equipment
         {
             CmdSwapInventoryEquip(slotIndices[1], slotIndices[0]); // reversed
         }
+    }
+
+    void OnDragAndClear_EquipmentSlot(int slotIndex)
+    {
+        CmdDropItem(slotIndex);
     }
 
     // validation

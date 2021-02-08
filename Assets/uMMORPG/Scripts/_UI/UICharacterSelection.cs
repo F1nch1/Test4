@@ -8,6 +8,7 @@ using Mirror;
 public partial class UICharacterSelection : MonoBehaviour
 {
     public UICharacterCreation uiCharacterCreation;
+    public UICharacterCustomization uiCharacterCustomization;
     public UIConfirmation uiConfirmation;
     public NetworkManagerMMO manager; // singleton is null until update
     public GameObject panel;
@@ -15,11 +16,12 @@ public partial class UICharacterSelection : MonoBehaviour
     public Button deleteButton;
     public Button createButton;
     public Button quitButton;
+    public bool creatingCharacter = false;
 
     void Update()
     {
         // show while in lobby and while not creating a character
-        if (manager.state == NetworkState.Lobby && !uiCharacterCreation.IsVisible())
+        if (manager.state == NetworkState.Lobby && !uiCharacterCreation.IsVisible() && !creatingCharacter)
         {
             panel.SetActive(true);
 
@@ -62,10 +64,14 @@ public partial class UICharacterSelection : MonoBehaviour
                 });
 
                 // create button
-                createButton.interactable = characters.Length < manager.characterLimit;
+                createButton.interactable = true;
                 createButton.onClick.SetListener(() => {
                     panel.SetActive(false);
-                    uiCharacterCreation.Show();
+                    creatingCharacter = true;
+                    //uiCharacterCreation.Show();
+                    uiCharacterCustomization.panel.SetActive(true);
+                    //manager.BeginCharacterCreation();
+                    uiCharacterCustomization.StartCreation();
                 });
 
                 // quit button

@@ -13,7 +13,6 @@ public class EquipmentItem : UsableItem
     [Range(0, 1)] public float blockChanceBonus;
     [Range(0, 1)] public float criticalChanceBonus;
     public GameObject modelPrefab;
-    public ItemDrop drop;
 
     // usage
     // -> can we equip this into any slot?

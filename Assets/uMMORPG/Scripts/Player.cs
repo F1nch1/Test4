@@ -94,6 +94,7 @@ public partial class Player : Entity
     public PlayerInteraction interaction;
     public Nutrition nutrition;
     public Hydration hydration;
+    public GameObject model;
 
     [Header("Text Meshes")]
     public TextMeshPro nameOverlay;

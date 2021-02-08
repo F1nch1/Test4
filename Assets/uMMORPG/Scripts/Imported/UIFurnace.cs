@@ -55,8 +55,7 @@ public class UIFurnace : MonoBehaviour
         Player player = Player.localPlayer;
         if (player)
         {
-            if (player.interaction.current != null &&
-                ((NetworkBehaviour)player.interaction.current).GetComponent<Furnace>() != null)
+            if (player.interaction.current != null && ((NetworkBehaviour)player.interaction.current).GetComponent<Furnace>() != null && player.interaction.GetComponent<ItemDrop>() == null)
             {
                 //panel.SetActive(true);
 

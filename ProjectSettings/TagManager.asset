@@ -25,6 +25,10 @@ TagManager:
   - NpcReviveSlot
   - Water
   - StudySlot
+  - FurnaceIngredientSlot
+  - FurnaceFuelSlot
+  - FurnaceResultSlot
+  - Furnace
   layers:
   - Default
   - TransparentFX

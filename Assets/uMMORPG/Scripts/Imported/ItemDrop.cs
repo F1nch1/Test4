@@ -87,6 +87,7 @@ public class ItemDrop : NetworkBehaviourNonAlloc, Interactable
                 // before truly destroyed
                 amount = 0;
                 NetworkServer.Destroy(gameObject);
+                player.interaction.current = null;
             }
         }
     }

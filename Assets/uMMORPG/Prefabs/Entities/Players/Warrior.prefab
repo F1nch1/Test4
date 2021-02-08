@@ -538,7 +538,8 @@ MonoBehaviour:
   onClientReceivedDamage:
     m_PersistentCalls:
       m_Calls: []
-  initialInvincibility: 30
+  initialInvincibility: 300
+  invincibilityExpired: 0
 --- !u!114 &11460454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,6 +612,7 @@ MonoBehaviour:
   interaction: {fileID: 6332686646123246221}
   nutrition: {fileID: -726893178028849901}
   hydration: {fileID: -4283075100880315258}
+  model: {fileID: 4506711376780802832}
   nameOverlay: {fileID: 3401869003798820015}
   nameOverlayDefaultColor: {r: 1, g: 1, b: 1, a: 1}
   nameOverlayOffenderColor: {r: 1, g: 0, b: 1, a: 1}
@@ -834,6 +836,8 @@ MonoBehaviour:
   player: {fileID: 11460454}
   animator: {fileID: 9557554}
   inventory: {fileID: 6069428826967279425}
+  dropRadius: 1
+  dropSolverAttempts: 3
   slotInfo:
   - requiredCategory: Weapon
     location: {fileID: 3260684721294232768}
@@ -986,6 +990,8 @@ MonoBehaviour:
     amount: 5
   - item: {fileID: 11400000, guid: 5966c016ee8f66744b4199ba1a9cc227, type: 2}
     amount: 5
+  - item: {fileID: 11400000, guid: 950fafd62387d48249d15357785c20a3, type: 2}
+    amount: 1
   splitKeys: 300100002f010000
   trash:
     item:
@@ -997,6 +1003,8 @@ MonoBehaviour:
       summonedLevel: 0
       summonedExperience: 0
     amount: 0
+  dropRadius: 1
+  dropSolverAttempts: 3
 --- !u!114 &638313012172154421
 MonoBehaviour:
   m_ObjectHideFlags: 0
