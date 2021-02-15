@@ -14,7 +14,7 @@ public partial class UIExperienceBar : MonoBehaviour
         {
             panel.SetActive(true);
             slider.value = player.experience.Percent();
-            statusText.text = "Lv." + player.level.current + " (" + (player.experience.Percent() * 100).ToString("F2") + "%)";
+            statusText.text = "Lv." + player.bookskills.melee_combat + " (" + (player.experience.Percent() * 100).ToString("F2") + "%)";
         }
         else panel.SetActive(false);
     }

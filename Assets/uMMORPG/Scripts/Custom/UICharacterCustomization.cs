@@ -18,6 +18,14 @@ public class UICharacterCustomization : MonoBehaviour
     public GameObject preview;
     public Transform[] cameraLocations;
     public UICharacterSelection selector;
+    public SkinnedMeshRenderer playerSMR;
+    public Material skinMaterial;
+    public Slider skinColor;
+    public float r;
+    public float g;
+    public float b;
+    public FlexibleColorPicker fcp;
+
 
 
     void Update()
@@ -49,11 +57,15 @@ public class UICharacterCustomization : MonoBehaviour
                     {
                         name = nameInput.text,
                         classIndex = (int)classSlider.value,
-                        gameMaster = gameMasterToggle.isOn
+                        gameMaster = gameMasterToggle.isOn,
+                        skinColor = fcp.color
+                        
+                        
                     };
                     NetworkClient.Send(message);
                     Debug.Log(message);
                     selector.creatingCharacter = false;
+                    Destroy(preview.gameObject);
                     Hide();
                 });
 
@@ -67,6 +79,16 @@ public class UICharacterCustomization : MonoBehaviour
                 });
             }
             else Hide();
+        }
+        playerSMR = manager.playerClasses[(int)classSlider.value].SMR;
+
+        r = 1 - skinColor.value;
+        b = 1 - skinColor.value;
+        g = 1 - skinColor.value;
+        for (int i = 0; i < playerSMR.sharedMaterials.Length; i++)
+        {
+            skinMaterial = playerSMR.sharedMaterials[i];
+            skinMaterial.SetColor("_Color", new Color(fcp.color.r, fcp.color.g, fcp.color.b, .5f));
         }
     }
 
@@ -83,6 +105,12 @@ public class UICharacterCustomization : MonoBehaviour
         preview.transform.localScale = new Vector3(4.8f, 4.8f, 4.8f);
         Camera.main.transform.position = cameraLocations[(int)classSlider.value].position;
         Camera.main.transform.rotation = cameraLocations[(int)classSlider.value].rotation;
+        playerSMR = manager.playerClasses[(int)classSlider.value].SMR;
+        skinMaterial = playerSMR.sharedMaterial;
+        r = 1 - skinColor.value;
+        b = 1 - skinColor.value;
+        g = 1 - skinColor.value;
+        skinMaterial.SetColor("_Color", new Color(fcp.color.r, fcp.color.g, fcp.color.b, .5f));
     }
     public bool IsVisible() { return panel.activeSelf; }
 
@@ -102,5 +130,20 @@ public class UICharacterCustomization : MonoBehaviour
         GameObject basePrefab = manager.playerClasses[(int)classSlider.value].model;
         preview = Instantiate(basePrefab, manager.creationLocation.position, manager.creationLocation.rotation);
         preview.transform.localScale = new Vector3(4.8f, 4.8f, 4.8f);
+    }
+
+    public void skinColorSlider()
+    {
+        playerSMR = manager.playerClasses[(int)classSlider.value].SMR;
+        
+        r = 1 - skinColor.value;
+        b = 1 - skinColor.value;
+        g = 1 - skinColor.value;
+        for(int i = 0; i < playerSMR.sharedMaterials.Length; i++)
+        {
+            skinMaterial = playerSMR.sharedMaterials[i];
+            skinMaterial.SetColor("_Color", new Color(fcp.color.r, fcp.color.g, fcp.color.b, .5f));
+        }
+
     }
 }

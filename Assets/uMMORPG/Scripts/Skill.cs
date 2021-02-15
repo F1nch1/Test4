@@ -29,12 +29,13 @@ public partial struct Skill
     public double castTimeEnd; // server time. double for long term precision.
     public double cooldownEnd; // server time. double for long term precision.
 
+
     // constructors
     public Skill(ScriptableSkill data)
     {
         hash = data.name.GetStableHashCode();
-
-        // learned only if learned by default
+        
+    // learned only if learned by default
         level = data.learnDefault ? 1 : 0;
 
         // ready immediately
@@ -73,6 +74,7 @@ public partial struct Skill
     public int upgradeRequiredLevel => data.requiredLevel.Get(level+1);
     public long upgradeRequiredSkillExperience => data.requiredSkillExperience.Get(level+1);
 
+
     // events
     public bool CheckSelf(Entity caster, bool checkSkillReady=true)
     {
@@ -81,7 +83,14 @@ public partial struct Skill
     }
     public bool CheckTarget(Entity caster) { return data.CheckTarget(caster); }
     public bool CheckDistance(Entity caster, out Vector3 destination) { return data.CheckDistance(caster, level, out destination); }
-    public void Apply(Entity caster) { data.Apply(caster, level); }
+    public void Apply(Entity caster) 
+    {
+        if (caster is Player) 
+        {
+            Player player = Player.localPlayer;
+            data.Apply(caster, data.GetSkillValue(data.usedTrait, player));
+        }
+    }
 
     // tooltip - dynamic part
     public string ToolTip(bool showRequirements = false)

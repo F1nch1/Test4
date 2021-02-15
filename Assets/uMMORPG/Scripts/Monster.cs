@@ -32,10 +32,12 @@ using Mirror;
 [RequireComponent(typeof(MonsterSkills))]
 [RequireComponent(typeof(NavMeshMovement))]
 [RequireComponent(typeof(NetworkNavMeshAgent))]
+
 public partial class Monster : Entity
 {
     [Header("Components")]
     public MonsterInventory inventory;
+    public Level monsterLevel;
 
     [Header("Experience Reward")]
     public long rewardExperience = 10;

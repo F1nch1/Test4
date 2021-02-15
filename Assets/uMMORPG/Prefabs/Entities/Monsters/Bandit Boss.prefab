@@ -280,6 +280,8 @@ MonoBehaviour:
   onClientReceivedDamage:
     m_PersistentCalls:
       m_Calls: []
+  initialInvincibility: 0
+  invincibilityExpired: 0
 --- !u!114 &114065500523104884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +296,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  level: {fileID: 2854235901309326993}
   health: {fileID: 3582723465047300472}
   combat: {fileID: 7963801882995042349}
   equipment: {fileID: 0}
@@ -324,6 +325,7 @@ MonoBehaviour:
   stunTimeEnd: 0
   inSafeZone: 0
   inventory: {fileID: 38612432841390798}
+  monsterLevel: {fileID: 2854235901309326993}
   rewardExperience: 150
   rewardSkillExperience: 2
   deathTime: 30

@@ -26,8 +26,8 @@ public abstract class SummonableItem : UsableItem
                (player.state == "IDLE" || player.state == "MOVING") &&
                NetworkTime.time >= player.nextRiskyActionTime &&
                summonPrefab != null &&
-               item.summonedHealth > 0 &&
-               item.summonedLevel <= player.level.current;
+               item.summonedHealth > 0;
+               //item.summonedLevel <= player.level.current;
     }
 
     public override void Use(Player player, int inventoryIndex)

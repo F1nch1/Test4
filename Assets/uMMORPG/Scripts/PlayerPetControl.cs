@@ -70,8 +70,9 @@ public class PlayerPetControl : NetworkBehaviourNonAlloc
             // => AFTER player exp reward! pet can only ever level up to player
             //    level, so it's best if the player gets exp and level-ups
             //    first, then afterwards we try to level up the pet.
+            Monster monster = (Monster)victim;
             if (activePet != null)
-                activePet.experience.current += Experience.BalanceExpReward(((Monster)victim).rewardExperience, activePet.level.current, victim.level.current);
+                activePet.experience.current += Experience.BalanceExpReward(((Monster)victim).rewardExperience, activePet.petLevel.current, monster.monsterLevel.current);
         }
     }
 

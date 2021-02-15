@@ -49,7 +49,7 @@ public class PortalToInstance : MonoBehaviour
                 if (player.isServer || player.isLocalPlayer)
                 {
                     // required level?
-                    if (player.level.current >= instanceTemplate.requiredLevel)
+                    if (player.bookskills.melee_combat >= instanceTemplate.requiredLevel)
                     {
                         // can only enter with a party
                         if (player.party.InParty())

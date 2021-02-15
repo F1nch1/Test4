@@ -56,7 +56,7 @@ public partial class UIParty : MonoBehaviour
                     {
                         Player member = Player.onlinePlayers[memberName];
                         slot.icon.sprite = member.classIcon;
-                        slot.levelText.text = member.level.current.ToString();
+                        slot.levelText.text = "Placeholder";
                         slot.guildText.text = member.guild.guild.name;
                         slot.healthSlider.value = member.health.Percent();
                         //slot.manaSlider.value = member.mana.Percent();

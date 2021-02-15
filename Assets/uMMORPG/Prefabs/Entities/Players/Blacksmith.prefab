@@ -595,6 +595,7 @@ MonoBehaviour:
   nutrition: {fileID: 682506447554969824}
   hydration: {fileID: 7298909255454804340}
   model: {fileID: 3266286444816726652}
+  SMR: {fileID: 3223204403551529968}
   nameOverlay: {fileID: 3401869003798820015}
   nameOverlayDefaultColor: {r: 1, g: 1, b: 1, a: 1}
   nameOverlayOffenderColor: {r: 1, g: 0, b: 1, a: 1}

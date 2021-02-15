@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Mirror;
+using UnityEngine;
 
 // client to server ////////////////////////////////////////////////////////////
 public partial class LoginMsg : MessageBase
@@ -16,6 +17,7 @@ public partial class CharacterCreateMsg : MessageBase
     public string name;
     public int classIndex;
     public bool gameMaster; // only allowed if host connection!
+    public Color skinColor;
 }
 
 public partial class CharacterSelectMsg : MessageBase

@@ -14,6 +14,7 @@ public class HorseBrain : CommonBrain
     public float followDistance = 20;
     [Range(0.1f, 1)] public float attackToMoveRangeRatio = 0.8f; // move as close as 0.8 * attackRange to a target
 
+    WeaponItem itemData;
     // events //////////////////////////////////////////////////////////////////
     public bool EventDeathTimeElapsed(Monster monster) =>
         monster.state == "DEAD" && NetworkTime.time >= monster.deathTimeEnd;
@@ -116,9 +117,18 @@ public class HorseBrain : CommonBrain
         }
         if (EventAggro(monster))
         {
-            // target in attack range. try to cast a first skill on it
+            int weaponIndex = player.equipment.GetEquippedWeaponIndex();
+            
+            if (weaponIndex != -1)
+            {
+                itemData = (WeaponItem)player.equipment.slots[weaponIndex].item.data;
+            }
+            if (itemData != null) 
+            { 
             Vector3 dirToPlayer = monster.transform.position - player.transform.position;
             monster.movement.Navigate((monster.transform.position + dirToPlayer), 0);
+            }
+
             return "MOVING";
         }
         if (EventMoveRandomly(monster))

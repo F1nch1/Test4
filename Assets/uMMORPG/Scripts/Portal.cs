@@ -21,7 +21,7 @@ public class Portal : MonoBehaviour
         if (player != null)
         {
             // required level?
-            if (player.level.current >= requiredLevel)
+            if (player.bookskills.melee_combat >= requiredLevel)
             {
                 // server? then enter the portal
                 if (player.isServer)

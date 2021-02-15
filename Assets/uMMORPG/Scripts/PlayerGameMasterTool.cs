@@ -91,14 +91,14 @@ public class PlayerGameMasterTool : NetworkBehaviourNonAlloc
         player.combat.invincible = value;
     }
 
-    [Command]
+    /*[Command]
     public void CmdSetCharacterLevel(int value)
     {
         // validate: only for GMs
         if (!player.isGameMaster) return;
 
         player.level.current = Mathf.Clamp(value, 1, player.level.max);
-    }
+    }*/
 
     [Command]
     public void CmdSetCharacterExperience(long value)

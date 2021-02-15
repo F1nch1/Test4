@@ -95,6 +95,8 @@ public partial class Player : Entity
     public Nutrition nutrition;
     public Hydration hydration;
     public GameObject model;
+    public SkinnedMeshRenderer SMR;
+    public Color skinColor;
 
     [Header("Text Meshes")]
     public TextMeshPro nameOverlay;
@@ -194,6 +196,12 @@ public partial class Player : Entity
         // setup camera targets
         GameObject.FindWithTag("MinimapCamera").GetComponent<CopyPosition>().target = transform;
         if (avatarCamera) avatarCamera.enabled = true; // avatar camera for local player
+        for (int i = 0; i < SMR.sharedMaterials.Length; i++)
+        {
+            Material skinMaterial = SMR.sharedMaterials[i];
+            skinMaterial.SetColor("_Color", new Color(skinColor.r, skinColor.g, skinColor.b, .5f));
+            Debug.Log("Loading color for material " + i);
+        }
     }
 
     protected override void Start()

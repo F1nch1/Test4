@@ -18,34 +18,37 @@ MonoBehaviour:
     Hits the target very hard!
 
 
-    Damage: {DAMAGE}
+    Damage:
+    {DAMAGE}
 
     Stun Chance: {STUNCHANCE}%
 
     Stun Time: {STUNTIME}s
 
-    Cast Time: {CASTTIME}
+    Cast
+    Time: {CASTTIME}
 
     Cooldown: {COOLDOWN}
 
     Cast Range: {CASTRANGE}
 
-    Mana Costs: {MANACOSTS}'
+    Mana
+    Costs: {MANACOSTS}'
   image: {fileID: 21300000, guid: 11e9e0a49822a4919adf05bddeb0f9f2, type: 3}
-  learnDefault: 0
+  learnDefault: 1
   showCastBar: 1
   cancelCastIfTargetDied: 1
-  allowMovement: 0
+  allowMovement: 1
   predecessor: {fileID: 0}
   predecessorLevel: 1
-  requiredWeaponCategory: WeaponSword
+  requiredWeaponCategory: Weapon
   requiredLevel:
-    baseValue: 2
+    baseValue: 100
     bonusPerLevel: 1
   requiredSkillExperience:
     baseValue: 5
     bonusPerLevel: 5
-  maxLevel: 4
+  maxLevel: 100
   manaCosts:
     baseValue: 5
     bonusPerLevel: 1
@@ -58,10 +61,11 @@ MonoBehaviour:
   castRange:
     baseValue: 2.3
     bonusPerLevel: 0
+  usedTrait: 0
   castSound: {fileID: 0}
   damage:
-    baseValue: 25
-    bonusPerLevel: 5
+    baseValue: 5
+    bonusPerLevel: 10000
   stunChance:
     baseValue: 1
     bonusPerLevel: 0

@@ -46,9 +46,43 @@ public abstract partial class ScriptableSkill : ScriptableObjectNonAlloc
     public LinearFloat castTime;
     public LinearFloat cooldown;
     public LinearFloat castRange;
+    public enum Trait
+    {
+        Int,
+        Str,
+        Agy,
+    }
+    public Trait usedTrait;
 
     [Header("Sound")]
     public AudioClip castSound;
+
+    public int GetSkillValue(Trait trait, Player player)
+    {
+        switch (trait)
+        {
+            case Trait.Agy:
+                {
+                    int traitLevel = player.traits.agility;
+                    return traitLevel;
+                }
+
+            case Trait.Str:
+                {
+                    int traitLevel = player.traits.resilience;
+                    return traitLevel;
+                }
+
+            case Trait.Int:
+                {
+                    int traitLevel = player.traits.intelligence;
+                    return traitLevel;
+                }
+
+            default: return 0;
+
+        }
+    }
 
     // the skill casting process ///////////////////////////////////////////////
     // some skills requires certain weapons.

@@ -110,6 +110,9 @@ public partial class Database : MonoBehaviour
         public long coins { get; set; } // TODO does long work?
         public bool gamemaster { get; set; }
         public float remainingInv { get; set; }
+        public float skinColorRed { get; set; }
+        public float skinColorGreen { get; set; }
+        public float skinColorBlue { get; set; }
         // online status can be checked from external programs with either just
         // just 'online', or 'online && (DateTime.UtcNow - lastsaved) <= 1min)
         // which is robust to server crashes too.
@@ -424,7 +427,7 @@ public partial class Database : MonoBehaviour
                     Item item = new Item(itemData);
                     item.durability = Mathf.Min(row.durability, item.maxDurability);
                     item.summonedHealth = row.summonedHealth;
-                    item.summonedLevel = row.summonedLevel;
+                    //item.summonedLevel = row.summonedLevel;
                     item.summonedExperience = row.summonedExperience;
                     inventory.slots[row.slot] = new ItemSlot(item, row.amount);
                 }
@@ -451,7 +454,7 @@ public partial class Database : MonoBehaviour
                     Item item = new Item(itemData);
                     item.durability = Mathf.Min(row.durability, item.maxDurability);
                     item.summonedHealth = row.summonedHealth;
-                    item.summonedLevel = row.summonedLevel;
+                    //item.summonedLevel = row.summonedLevel;
                     item.summonedExperience = row.summonedExperience;
                     study.slots[row.slot] = new ItemSlot(item, row.amount);
                 }
@@ -571,7 +574,7 @@ public partial class Database : MonoBehaviour
                     Item item = new Item(itemData);
                     item.durability = Mathf.Min(row.durability, item.maxDurability);
                     item.summonedHealth = row.summonedHealth;
-                    item.summonedLevel = row.summonedLevel;
+                    //item.summonedLevel = row.summonedLevel;
                     item.summonedExperience = row.summonedExperience;
                     equipment.slots[row.slot] = new ItemSlot(item, row.amount);
                 }
@@ -714,6 +717,16 @@ public partial class Database : MonoBehaviour
         }
     }
 
+    void LoadSkinColor(float r, float g, float b, Player player)
+    {
+        for (int i = 0; i < player.SMR.sharedMaterials.Length; i++)
+        {
+            Material skinMaterial = player.SMR.sharedMaterials[i];
+            skinMaterial.SetColor("_Color", new Color(r, g, b, .5f));
+            Debug.Log("Loading color for material " + i);
+        }
+    }
+
     public GameObject CharacterLoad(string characterName, List<Player> prefabs, bool isPreview)
     {
         characters row = connection.FindWithQuery<characters>("SELECT * FROM characters WHERE name=? AND deleted=0", characterName);
@@ -730,7 +743,7 @@ public partial class Database : MonoBehaviour
                 player.account                                = row.account;
                 player.className                              = row.classname;
                 Vector3 position                              = new Vector3(row.x, row.y, row.z);
-                player.level.current                          = Mathf.Min(row.level, player.level.max); // limit to max level in case we changed it
+                //player.level.current                          = Mathf.Min(row.level, player.level.max); // limit to max level in case we changed it
                 player.strength.value                         = row.strength;
                 player.intelligence.value                     = row.intelligence;
                 player.experience.current                     = row.experience;
@@ -770,6 +783,7 @@ public partial class Database : MonoBehaviour
                 LoadBuffs((PlayerSkills)player.skills);
                 LoadQuests(player.quests);
                 LoadGuildOnDemand(player.guild);
+                LoadSkinColor(player.skinColor.r, player.skinColor.g, player.skinColor.b, player);
 
                 // assign health / mana after max values were fully loaded
                 // (they depend on equipment, buffs, etc.)
@@ -815,7 +829,7 @@ public partial class Database : MonoBehaviour
                     amount = slot.amount,
                     durability = slot.item.durability,
                     summonedHealth = slot.item.summonedHealth,
-                    summonedLevel = slot.item.summonedLevel,
+                    //summonedLevel = slot.item.summonedLevel,
                     summonedExperience = slot.item.summonedExperience
                 });
             }
@@ -842,7 +856,7 @@ public partial class Database : MonoBehaviour
                     amount = slot.amount,
                     durability = slot.item.durability,
                     summonedHealth = slot.item.summonedHealth,
-                    summonedLevel = slot.item.summonedLevel,
+                    //summonedLevel = slot.item.summonedLevel,
                     summonedExperience = slot.item.summonedExperience
                 });
             }
@@ -910,7 +924,7 @@ public partial class Database : MonoBehaviour
                     amount = slot.amount,
                     durability = slot.item.durability,
                     summonedHealth = slot.item.summonedHealth,
-                    summonedLevel = slot.item.summonedLevel,
+                    //summonedLevel = slot.item.summonedLevel,
                     summonedExperience = slot.item.summonedExperience
                 });
             }
@@ -989,7 +1003,7 @@ public partial class Database : MonoBehaviour
             x = player.transform.position.x,
             y = player.transform.position.y,
             z = player.transform.position.z,
-            level = player.level.current,
+            //level = player.level.current,
             health = player.health.current,
             //mana = player.mana.current,
             endurance = player.endurance.current,
@@ -1004,6 +1018,9 @@ public partial class Database : MonoBehaviour
             gamemaster = player.isGameMaster,
             remainingInv = player.combat.initialInvincibility,
             online = online,
+            //skinColorRed = player.skinColor.r,
+            //skinColorBlue = player.skinColor.b,
+            //skinColorGreen = player.skinColor.g,
             lastsaved = DateTime.UtcNow
         });
 
@@ -1068,14 +1085,14 @@ public partial class Database : MonoBehaviour
             if (Player.onlinePlayers.TryGetValue(member.name, out Player player))
             {
                 member.online = true;
-                member.level = player.level.current;
+                //member.level = player.level.current;
             }
             else
             {
                 member.online = false;
                 // note: FindWithQuery<characters> is easier than ExecuteScalar<int> because we need the null check
                 characters character = connection.FindWithQuery<characters>("SELECT * FROM characters WHERE name=?", member.name);
-                member.level = character != null ? character.level : 1;
+                
             }
 
             members[i] = member;

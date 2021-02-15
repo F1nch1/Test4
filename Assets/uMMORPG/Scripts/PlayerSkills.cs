@@ -136,9 +136,10 @@ public class PlayerSkills : Skills
         // killed a monster
         if (victim is Monster)
         {
+            Monster monster = (Monster)victim;
             // gain exp if not in a party or if in a party without exp share
             if (!party.InParty() || !party.party.shareExperience)
-                skillExperience += Experience.BalanceExpReward(((Monster)victim).rewardSkillExperience, level.current, victim.level.current);
+                skillExperience += Experience.BalanceExpReward(((Monster)victim).rewardSkillExperience, level.current, monster.monsterLevel.current);
         }
     }
 }

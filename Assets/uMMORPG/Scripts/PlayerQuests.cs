@@ -63,7 +63,7 @@ public class PlayerQuests : NetworkBehaviourNonAlloc
         // not accepted yet?
         // has finished predecessor quest (if any)?
         return CountIncomplete() < activeQuestLimit &&
-               player.level.current >= quest.requiredLevel &&  // has required level?
+               player.bookskills.melee_combat >= quest.requiredLevel &&  // has required level?
                GetIndexByName(quest.name) == -1 &&     // not accepted yet?
                (quest.predecessor == null || HasCompleted(quest.predecessor.name));
     }

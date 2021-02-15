@@ -18,14 +18,12 @@ public partial struct GuildMember
 {
     // basic info
     public string name;
-    public int level;
     public bool online;
     public GuildRank rank;
 
-    public GuildMember(string name, int level, bool online, GuildRank rank)
+    public GuildMember(string name, bool online, GuildRank rank)
     {
         this.name = name;
-        this.level = level;
         this.online = online;
         this.rank = rank;
     }
@@ -44,11 +42,11 @@ public struct Guild
     public string master => members != null ? Array.Find(members, (m) => m.rank == GuildRank.Master).name : "";
 
     // if we create a guild then always with a name and a first member
-    public Guild(string name, string firstMember, int firstMemberLevel)
+    public Guild(string name, string firstMember)
     {
         this.name = name;
         notice = "";
-        GuildMember member = new GuildMember(firstMember, firstMemberLevel, true, GuildRank.Master);
+        GuildMember member = new GuildMember(firstMember,  true, GuildRank.Master);
         members = new GuildMember[]{member};
     }
 

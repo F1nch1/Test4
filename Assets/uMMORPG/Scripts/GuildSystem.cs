@@ -71,14 +71,14 @@ public static class GuildSystem
     }
 
     // create a guild. health, near npc, etc. needs to be checked in the caller.
-    public static bool CreateGuild(string creator, int creatorLevel, string guildName)
+    public static bool CreateGuild(string creator, string guildName)
     {
         // doesn't exist yet?
         if (IsValidGuildName(guildName) &&
             !Database.singleton.GuildExists(guildName)) // db check only on server, no Guild.CanCreate function because client has no DB.
         {
             // create guild and add creator to members list as highest rank
-            Guild guild = new Guild(guildName, creator, creatorLevel);
+            Guild guild = new Guild(guildName, creator);
 
             // broadcast and save
             BroadcastChanges(guild);
@@ -154,7 +154,7 @@ public static class GuildSystem
         }
     }
 
-    public static bool AddToGuild(string guildName, string requester, string member, int memberLevel)
+    public static bool AddToGuild(string guildName, string requester, string member)
     {
         // guild exists, requester can invite member?
         if (guilds.TryGetValue(guildName, out Guild guild) &&
@@ -162,7 +162,7 @@ public static class GuildSystem
         {
             // add to members
             Array.Resize(ref guild.members, guild.members.Length + 1);
-            guild.members[guild.members.Length - 1] = new GuildMember(member, memberLevel, true, GuildRank.Member);
+            guild.members[guild.members.Length - 1] = new GuildMember(member, true, GuildRank.Member);
 
             // broadcast and save
             BroadcastChanges(guild);

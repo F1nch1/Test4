@@ -16,7 +16,7 @@ public abstract class Summonable : Entity
     protected virtual ItemSlot SyncStateToItemSlot(ItemSlot slot)
     {
         slot.item.summonedHealth = health.current;
-        slot.item.summonedLevel = level.current;
+        //slot.item.summonedLevel = level.current;
 
         // remove item if died?
         if (((SummonableItem)slot.item.data).removeItemIfDied && health.current == 0)

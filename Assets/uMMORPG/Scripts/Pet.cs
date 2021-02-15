@@ -11,6 +11,7 @@ public partial class Pet : Summonable
 {
     [Header("Components")]
     public Experience experience;
+    public Level petLevel;
 
     [Header("Icons")]
     public Sprite portraitIcon; // for pet status UI

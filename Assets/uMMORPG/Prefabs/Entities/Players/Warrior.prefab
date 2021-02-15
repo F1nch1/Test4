@@ -613,6 +613,8 @@ MonoBehaviour:
   nutrition: {fileID: -726893178028849901}
   hydration: {fileID: -4283075100880315258}
   model: {fileID: 4506711376780802832}
+  SMR: {fileID: 1903090839091370882}
+  skinColor: {r: 0, g: 0, b: 0, a: 0}
   nameOverlay: {fileID: 3401869003798820015}
   nameOverlayDefaultColor: {r: 1, g: 1, b: 1, a: 1}
   nameOverlayOffenderColor: {r: 1, g: 0, b: 1, a: 1}
@@ -1353,7 +1355,7 @@ MonoBehaviour:
   agility: 5
   awareness: 3
   charisma: 4
-  intelligence: 5
+  intelligence: 666
   resilience: 6
 --- !u!114 &960257560498122028
 MonoBehaviour:
@@ -1545,7 +1547,7 @@ MonoBehaviour:
   health: {fileID: 2823564572603043832}
   spawnFull: 1
   overflowInto: {fileID: 2823564572603043832}
-  underflowInto: {fileID: 2823564572603043832}
+  underflowInto: {fileID: 0}
   recoveryTickRate: 1
   onEmpty:
     m_PersistentCalls:
@@ -1569,7 +1571,7 @@ MonoBehaviour:
   health: {fileID: 2823564572603043832}
   spawnFull: 1
   overflowInto: {fileID: 2823564572603043832}
-  underflowInto: {fileID: 2823564572603043832}
+  underflowInto: {fileID: 0}
   recoveryTickRate: 1
   onEmpty:
     m_PersistentCalls:

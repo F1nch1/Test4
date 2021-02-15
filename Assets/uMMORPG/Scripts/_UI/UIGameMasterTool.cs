@@ -77,11 +77,11 @@ public partial class UIGameMasterTool : MonoBehaviour
 
                 // level: set if not editing, apply otherwise
                 if (!levelInput.isFocused)
-                    levelInput.text = player.level.current.ToString();
+                    levelInput.text = player.bookskills.melee_combat.ToString();
 
-                levelInput.onEndEdit.SetListener((value) => {
-                    player.gameMasterTool.CmdSetCharacterLevel(Convert.ToInt32(value));
-                });
+                //levelInput.onEndEdit.SetListener((value) => {
+                //    player.gameMasterTool.CmdSetCharacterLevel(Convert.ToInt32(value));
+                //});
 
                 // exp: set if not editing, apply otherwise
                 if (!experienceInput.isFocused)

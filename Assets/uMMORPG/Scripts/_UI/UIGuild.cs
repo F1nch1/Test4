@@ -81,7 +81,7 @@ public partial class UIGuild : MonoBehaviour
 
                     slot.onlineStatusImage.color = member.online ? onlineColor : offlineColor;
                     slot.nameText.text = member.name;
-                    slot.levelText.text = member.level.ToString();
+                    //slot.levelText.text = member.level.ToString();
                     slot.rankText.text = member.rank.ToString();
                     slot.promoteButton.interactable = currentGuild.CanPromote(player.name, member.name);
                     slot.promoteButton.onClick.SetListener(() => {

@@ -51,7 +51,7 @@ public partial class UICharacterInfo : MonoBehaviour
                 criticalChanceText.text = (player.combat.criticalChance * 100).ToString("F0") + "%";
                 blockChanceText.text = (player.combat.blockChance * 100).ToString("F0") + "%";
                 speedText.text = player.speed.ToString("F1");
-                levelText.text = player.level.current.ToString();
+                //levelText.text = player.level.current.ToString();
                 currentExperienceText.text = player.experience.current.ToString();
                 maximumExperienceText.text = player.experience.max.ToString();
                 skillExperienceText.text = ((PlayerSkills)player.skills).skillExperience.ToString();

@@ -29,5 +29,6 @@ public class TargetDamageSkill : DamageSkill
                                    caster.combat.damage + damage.Get(skillLevel),
                                    stunChance.Get(skillLevel),
                                    stunTime.Get(skillLevel));
+        Debug.Log("Applied skill " + name + " with value " + skillLevel);
     }
 }

@@ -29,7 +29,7 @@ public partial struct Item
     // dynamic stats (cooldowns etc. later)
     public GameObject summoned; // summonable that's currently summoned
     public int summonedHealth; // stored in item while summonable unsummoned
-    public int summonedLevel; // stored in item while summonable unsummoned
+    //public int summonedLevel; // stored in item while summonable unsummoned
     public long summonedExperience; // stored in item while summonable unsummoned
 
     // constructors
@@ -40,7 +40,7 @@ public partial struct Item
         summoned = null;
         ammo = 0;
         summonedHealth = data is SummonableItem summonable ? summonable.summonPrefab.health.max : 0;
-        summonedLevel = data is SummonableItem ? 1 : 0;
+        //summonedLevel = data is SummonableItem ? 1 : 0;
         summonedExperience = 0;
     }
 
@@ -88,7 +88,7 @@ public partial struct Item
             tip.Replace("{DURABILITY}", (DurabilityPercent() * 100).ToString("F0"));
 
         tip.Replace("{SUMMONEDHEALTH}", summonedHealth.ToString());
-        tip.Replace("{SUMMONEDLEVEL}", summonedLevel.ToString());
+        //tip.Replace("{SUMMONEDLEVEL}", summonedLevel.ToString());
         tip.Replace("{SUMMONEDEXPERIENCE}", summonedExperience.ToString());
 
         // addon system hooks

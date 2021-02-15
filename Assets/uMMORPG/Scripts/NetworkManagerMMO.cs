@@ -357,7 +357,7 @@ public partial class NetworkManagerMMO : NetworkManager
         return GetStartPosition();
     }
 
-    Player CreateCharacter(GameObject classPrefab, string characterName, string account, bool gameMaster)
+    Player CreateCharacter(GameObject classPrefab, string characterName, string account, bool gameMaster, Color skinColor)
     {
         // create new character based on the prefab.
         // -> we also assign default items and equipment for new characters
@@ -369,6 +369,7 @@ public partial class NetworkManagerMMO : NetworkManager
         player.name = characterName;
         player.account = account;
         player.className = classPrefab.name;
+        player.skinColor = skinColor;
         player.transform.position = GetStartPositionFor(player.className).position;
         for (int i = 0; i < player.inventory.size; ++i)
         {
@@ -421,7 +422,7 @@ public partial class NetworkManagerMMO : NetworkManager
                                 conn == NetworkServer.localConnection)
                             {
                                 // create new character based on the prefab.
-                                Player player = CreateCharacter(playerClasses[message.classIndex].gameObject, message.name, account, message.gameMaster);
+                                Player player = CreateCharacter(playerClasses[message.classIndex].gameObject, message.name, account, message.gameMaster, message.skinColor);
 
                                 // addon system hooks
                                 onServerCharacterCreate.Invoke(message, player);
@@ -457,6 +458,7 @@ public partial class NetworkManagerMMO : NetworkManager
                 {
                     //print("character name already exists: " + message.name); <- don't show on live server
                     ServerSendError(conn, "name already exists", false);
+                    
                 }
             }
             else

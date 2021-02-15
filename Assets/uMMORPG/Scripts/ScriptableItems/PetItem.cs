@@ -24,7 +24,7 @@ public class PetItem : SummonableItem
         Pet pet = go.GetComponent<Pet>();
         pet.name = summonPrefab.name; // avoid "(Clone)"
         pet.owner = player;
-        pet.level.current = slot.item.summonedLevel;
+        //pet.level.current = slot.item.summonedLevel;
         pet.experience.current = slot.item.summonedExperience;
         // set health AFTER level, otherwise health is always level 1 max health
         pet.health.current = slot.item.summonedHealth;

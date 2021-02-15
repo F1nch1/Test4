@@ -23,7 +23,7 @@ public abstract class UsableItem : ScriptableItem
     {
         // check level etc. and make sure that cooldown buff elapsed (if any)
         // and check durability if a durability item
-        return player.level.current >= minLevel &&
+        return 
                player.GetItemCooldown(cooldownCategory) == 0 &&
                player.inventory.slots[inventoryIndex].item.CheckDurability();
     }

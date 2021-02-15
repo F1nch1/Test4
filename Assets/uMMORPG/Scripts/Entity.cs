@@ -53,7 +53,7 @@ using TMPro;
 public abstract partial class Entity : NetworkBehaviourNonAlloc
 {
     [Header("Components")]
-    public Level level;
+    //public Level level;
     public Health health;
     public Combat combat;
     public Equipment equipment;
@@ -104,7 +104,7 @@ public abstract partial class Entity : NetworkBehaviourNonAlloc
                 buffBonus += buff.speedBonus;
 
             // base + passives + buffs
-            return _speed.Get(level.current) + passiveBonus + buffBonus;
+            return _speed.Get(1) + passiveBonus + buffBonus;
         }
     }
 

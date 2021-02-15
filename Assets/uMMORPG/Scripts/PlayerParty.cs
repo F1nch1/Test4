@@ -203,15 +203,15 @@ public class PlayerParty : NetworkBehaviourNonAlloc
                         monster.rewardExperience,
                         closeMembers.Count,
                         Party.BonusExperiencePerMember,
-                        member.level.current,
-                        victim.level.current
+                        member.bookskills.melee_combat,
+                        monster.monsterLevel.current
                     );
                     ((PlayerSkills)member.skills).skillExperience += CalculateExperienceShare(
                         monster.rewardSkillExperience,
                         closeMembers.Count,
                         Party.BonusExperiencePerMember,
-                        member.level.current,
-                        victim.level.current
+                        member.bookskills.melee_combat,
+                        monster.monsterLevel.current
                     );
                 }
             }

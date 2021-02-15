@@ -41,7 +41,7 @@ public class UIPetStatus : MonoBehaviour
             experienceSlider.GetComponent<UIShowToolTip>().text = "Experience: " + pet.experience.current + " / " + pet.experience.max;
 
             nameText.text = pet.name;
-            levelText.text = "Lv." + pet.level.current;
+            levelText.text = "Lv." + pet.petLevel.current;
 
             autoAttackButton.GetComponentInChildren<Text>().fontStyle = pet.autoAttack ? FontStyle.Bold : FontStyle.Normal;
             autoAttackButton.onClick.SetListener(() => {

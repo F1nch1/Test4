@@ -105,7 +105,7 @@ public class PlayerGuild : NetworkBehaviourNonAlloc
             sender.guild.InGuild())
         {
             // try to add. GuildSystem does all the checks.
-            GuildSystem.AddToGuild(sender.guild.guild.name, sender.name, name, player.level.current);
+            GuildSystem.AddToGuild(sender.guild.guild.name, sender.name, name);
         }
 
         // reset guild invite in any case
@@ -183,7 +183,7 @@ public class PlayerGuild : NetworkBehaviourNonAlloc
             !InGuild() && IsGuildManagerNear())
         {
             // try to create the guild. pay for it if it worked.
-            if (GuildSystem.CreateGuild(name, player.level.current, guildName))
+            if (GuildSystem.CreateGuild(name, guildName))
                 player.gold -= GuildSystem.CreationPrice;
             else
                 chat.TargetMsgInfo("Guild name invalid!");

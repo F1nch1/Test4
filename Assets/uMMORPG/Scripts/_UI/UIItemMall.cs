@@ -91,7 +91,7 @@ public partial class UIItemMall : MonoBehaviour
 
                 // overview
                 nameText.text = player.name;
-                levelText.text = "Lv. " + player.level.current;
+                //levelText.text = "Lv. " + player.level.current;
                 currencyAmountText.text = player.itemMall.coins.ToString();
                 buyButton.onClick.SetListener(() => { Application.OpenURL(buyUrl); });
                 couponInput.interactable = NetworkTime.time >= player.nextRiskyActionTime;

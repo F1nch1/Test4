@@ -345,6 +345,7 @@ MonoBehaviour:
   nutrition: {fileID: 1573646280117512601}
   hydration: {fileID: 4850808276997850568}
   model: {fileID: 1337643834185399715}
+  SMR: {fileID: 440060033678996301}
   nameOverlay: {fileID: 7366955452696793662}
   nameOverlayDefaultColor: {r: 1, g: 1, b: 1, a: 1}
   nameOverlayOffenderColor: {r: 1, g: 0, b: 1, a: 1}
@@ -875,7 +876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 1
   syncInterval: 0.1
-  level: {fileID: 0}
+  level: {fileID: 2426397423608983621}
   _current: 0
   _max:
     multiplier: 100
@@ -1212,7 +1213,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   currentSkill: -1
-  level: {fileID: 0}
+  level: {fileID: 2426397423608983621}
   movement: {fileID: 3016753915855997007}
   party: {fileID: 1571798236742742759}
   skillExperience: 0
